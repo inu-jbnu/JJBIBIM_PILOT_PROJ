@@ -97,6 +97,27 @@
 
     .sw-nav__item.is-active { color: #0d1830 !important; }
 
+    /* Engine's default .sw-route__label is dark-text-on-near-white — which reads fine
+       on the engine's default LIGHT theme, but our --sw-ink is near-white (#F5F5FF)
+       for this dark-navy theme, so the label text was rendering white-on-white
+       (invisible). Force dark text on that pill regardless of --sw-ink. */
+    .sw-route__label { color: #0d1830 !important; }
+
+    /* Engine's default .sw-topbar is a 2-item flex row (brand, nav) with
+       justify-content:space-between — when a 3rd item (the top-right CTA)
+       was present it balanced the row and the center nav (About/Character/
+       Game/How to Play) landed visually centered. Removing the CTA button
+       left only brand+nav, so space-between pushed the nav all the way to
+       the right edge instead. Switch to a 3-column grid (left/center/right)
+       so the nav is always centered regardless of whether a CTA exists. */
+    .sw-topbar {
+      display: grid !important;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+    }
+    .sw-topbar .sw-brand { grid-column: 1; justify-self: start; }
+    .sw-topbar .sw-nav { grid-column: 2; justify-self: center; }
+
     /* ---- floating HUD panel — used for both the Character member card and the
        Game setlist. Positioned fixed over the scene image (not stacked inside
        .sw-copy, whose vertically-centred, un-scrollable layout clips tall content),
@@ -130,31 +151,72 @@
       .sb-hud { display: none; } /* desktop-scope layout for now; mobile ships its own pass */
     }
 
+    /* Game section: album-cover + setlist panel, laid out side by side, at a
+       large "always this size" scale (per feedback — no more small default +
+       separate fullscreen toggle; this IS the resting size now). The cover
+       is clickable to reveal a short album blurb; the setlist to its right
+       selects (and plays) a track and swaps the cover to match. */
+    #sb-hud-game { width: min(1120px, 62vw); max-height: 82vh; right: clamp(40px, 8vw, 150px); }
+    .sb-game-panel { display: flex; gap: 32px; align-items: flex-start; }
+    .sb-game-cover-col { width: 300px; flex: none; display: flex; flex-direction: column; gap: 16px; }
+    .sb-game-cover {
+      position: relative; width: 300px; height: 300px; border-radius: 16px;
+      overflow: hidden; cursor: pointer; border: 1px solid rgba(245,245,255,0.28);
+      box-shadow: 0 14px 34px rgba(0,0,0,0.4);
+      transition: transform .15s ease, border-color .15s ease;
+    }
+    .sb-game-cover:hover { transform: translateY(-2px); border-color: var(--sw-accent); }
+    .sb-game-cover:focus-visible { outline: 2px solid var(--sw-accent); outline-offset: 2px; }
+    .sb-game-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .sb-game-cover__hint {
+      position: absolute; left: 0; right: 0; bottom: 0; padding: 8px 10px;
+      font-family: 'Gothic A1', sans-serif; font-size: .78rem; text-align: center;
+      letter-spacing: .01em; color: #F5F5FF; background: rgba(13,24,48,0.72);
+    }
+    .sb-game-info { font-family: 'Gothic A1', sans-serif; }
+    .sb-game-info strong {
+      display: block; font-family: var(--sw-font-display); font-size: 1.3rem;
+      color: #F5F5FF; margin-bottom: 8px;
+    }
+    .sb-game-info p { margin: 0; font-size: .92rem; line-height: 1.55; color: var(--sw-ink-soft); }
+    .sb-game-setlist-col { flex: 1 1 auto; min-width: 0; padding-top: 4px; }
+    .sb-hud__label--setlist { display: block; margin: 0 0 12px; font-size: 1rem; letter-spacing: .18em; }
+
     /* Game section: song list rendered as a pixel setlist instead of plain tags */
-    .sb-setlist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 5px; }
+    .sb-setlist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
     .sb-setlist li {
-      display: flex; align-items: baseline; gap: 8px;
-      font-family: 'Gothic A1', sans-serif; font-size: .9rem; color: #F5F5FF;
-      padding: 7px 4px; border-bottom: 1px dashed rgba(245,245,255,0.18);
+      display: flex; align-items: center; gap: 14px;
+      font-family: 'Gothic A1', sans-serif; font-size: 1.3rem; color: #F5F5FF;
+      padding: 12px 10px; border-bottom: 1px dashed rgba(245,245,255,0.18);
     }
     .sb-setlist li:last-child { border-bottom: 0; }
-    .sb-setlist .n { font-family: var(--sw-font-display); color: var(--sw-accent); font-size: .78rem; width: 1.5em; flex: none; }
-    .sb-setlist .mood { margin-left: auto; font-size: .7rem; color: var(--sw-ink-soft); letter-spacing: .03em; white-space: nowrap; }
+    .sb-setlist .n { font-family: var(--sw-font-display); color: var(--sw-accent); font-size: 1.05rem; width: 1.7em; flex: none; }
+    .sb-setlist .t { font-family: var(--sw-font-display); font-weight: 400; letter-spacing: .015em; }
+    .sb-setlist .genre { margin-left: auto; font-size: .8rem; color: var(--sw-ink-soft); letter-spacing: .02em; white-space: nowrap; }
 
     /* Game section: each song is clickable — plays its own mp3 */
     .sb-setlist li[data-src] {
-      cursor: pointer; border-radius: 4px;
+      cursor: pointer; border-radius: 6px;
       transition: background .15s ease, padding-left .15s ease;
     }
     .sb-setlist li[data-src]:hover {
       background: color-mix(in srgb, var(--sw-accent) 12%, transparent);
-      padding-left: 8px;
+      padding-left: 16px;
     }
     .sb-setlist li[data-src]:focus-visible { outline: 2px solid var(--sw-accent); outline-offset: 2px; }
-    .sb-setlist .play { font-size: .64rem; color: var(--sw-ink-soft); width: 1.1em; text-align: center; flex: none; }
+    .sb-setlist .play { font-size: 1rem; color: var(--sw-ink-soft); width: 1.3em; text-align: center; flex: none; }
     .sb-setlist li.is-playing { color: var(--sw-accent); }
     .sb-setlist li.is-playing .n,
     .sb-setlist li.is-playing .play { color: var(--sw-accent); }
+    .sb-setlist li.is-selected {
+      background: color-mix(in srgb, var(--sw-accent) 10%, transparent);
+      border-radius: 6px;
+    }
+    @media (max-width: 1100px) {
+      #sb-hud-game { width: min(920px, 70vw); }
+      .sb-game-cover-col, .sb-game-cover { width: 220px; height: 220px; }
+      .sb-setlist li { font-size: 1.1rem; }
+    }
 
     /* How-to-Play: WASD chip cluster, a real structural device (it IS the control scheme) */
     .sb-wasd { display: grid; grid-template-columns: repeat(3, 40px); grid-template-rows: repeat(2, 40px); gap: 6px; margin-top: 24px; }
@@ -190,7 +252,8 @@
       font-family: var(--sw-font-display); font-size: 1.4rem; line-height: 1.1;
     }
     .sb-member-card__role {
-      font-family: 'Gothic A1', sans-serif; font-size: .74rem; color: var(--sw-ink-soft); margin-top: 3px;
+      font-family: 'Gothic A1', sans-serif; font-size: .82rem; font-weight: 700;
+      color: #F5F5FF; margin-top: 4px;
     }
     .sb-member-card__stats {
       display: grid; grid-template-columns: auto 1fr; gap: 5px 12px;
@@ -222,10 +285,10 @@
   <div class="sb-hud" id="sb-hud-game"></div>
 
   <script src="scrub-engine.js"></script>
+  <script src="game.js"></script>
   <script>
     mountScrollWorld(document.getElementById('world'), {
       brand: { name: 'SUMMER BREEZE', href: '#top' },
-      cta: { label: '지금 시작하기', href: '#howtoplay' },
       hint: '스크롤로 세계 속으로',
       nav: true,
       diveScroll: 1.35,
@@ -235,6 +298,8 @@
           id: 'about', label: 'About',
           still: 'https://d8j0ntlcm91z4.cloudfront.net/user_3IAh7r0CkaIIfxp3ZToY5YPwNt0/hf_20260821_130303_7de2f63d-2c1e-4429-a4ce-b96c018abc13.png',
           clip: 'https://d2ol7oe51mr4n9.cloudfront.net/user_3IAh7r0CkaIIfxp3ZToY5YPwNt0/de0f2c9f-fbb4-4643-a2fd-be3257daa20d.mp4',
+          stillMobile: 'https://d2ol7oe51mr4n9.cloudfront.net/user_3IAh7r0CkaIIfxp3ZToY5YPwNt0/592ed29b-3556-4bc9-affd-6e771c7a1361.webp',
+          clipMobile: 'https://d2ol7oe51mr4n9.cloudfront.net/user_3IAh7r0CkaIIfxp3ZToY5YPwNt0/ec029c98-3b43-41d3-91a9-4f182750d430.mp4',
           accent: '#4FD6E0',
           linger: 0.3,
           eyebrow: 'WELCOME TO SUMMER BREEZE',
@@ -246,6 +311,8 @@
           id: 'character', label: 'Character',
           still: 'https://d8j0ntlcm91z4.cloudfront.net/user_3IAh7r0CkaIIfxp3ZToY5YPwNt0/hf_20260821_133122_ecab59ad-94d4-46b9-8103-0a72cf48c5fa.png',
           clip: 'https://d2ol7oe51mr4n9.cloudfront.net/user_3IAh7r0CkaIIfxp3ZToY5YPwNt0/30835ea1-94a1-4a57-ae03-9c22951a7404.mp4',
+          stillMobile: 'https://d2ol7oe51mr4n9.cloudfront.net/user_3IAh7r0CkaIIfxp3ZToY5YPwNt0/769d5443-4abd-4ccd-97dc-e3cf0ee1ab3f.webp',
+          clipMobile: 'https://d2ol7oe51mr4n9.cloudfront.net/user_3IAh7r0CkaIIfxp3ZToY5YPwNt0/00d0446f-0e26-43a4-9e5d-74896537de4c.mp4',
           accent: '#FF8C7A',
           linger: 0.4,
           eyebrow: 'MEET THE GROUP',
@@ -257,16 +324,20 @@
           id: 'game', label: 'Game',
           still: 'https://d8j0ntlcm91z4.cloudfront.net/user_3IAh7r0CkaIIfxp3ZToY5YPwNt0/hf_20260821_130159_002b680f-2ddd-4c0b-a1c2-e355cf5acf7a.png',
           clip: 'https://d2ol7oe51mr4n9.cloudfront.net/user_3IAh7r0CkaIIfxp3ZToY5YPwNt0/19ffd83a-c757-458d-85b7-b7496b202e93.mp4',
+          stillMobile: 'https://d2ol7oe51mr4n9.cloudfront.net/user_3IAh7r0CkaIIfxp3ZToY5YPwNt0/c4f41c83-8321-4b91-88ee-544090dc19a6.webp',
+          clipMobile: 'https://d2ol7oe51mr4n9.cloudfront.net/user_3IAh7r0CkaIIfxp3ZToY5YPwNt0/0dd33925-a151-442d-8611-b4d5f380f85a.mp4',
           accent: '#FFE9A8',
           linger: 0.35,
           eyebrow: 'PLAY THE STAGE',
           title: '리듬으로 완성하는 라이브 무대',
-          body: '하트 스테이지 위에서, 다섯 곡의 서로 다른 무드를 리듬으로 연주하며 그룹의 성장 포인트를 쌓아 올리세요.',
+          body: '하트 스테이지 위에서, 서로 다른 무드의 다섯 곡을 연주하며 그룹의 성장 포인트를 쌓아 올리세요.',
         },
         {
           id: 'howtoplay', label: 'How to Play',
           still: 'https://d8j0ntlcm91z4.cloudfront.net/user_3IAh7r0CkaIIfxp3ZToY5YPwNt0/hf_20260821_130536_366c8055-b8fa-4a9f-9644-48da95bbe302.png',
           clip: 'https://d2ol7oe51mr4n9.cloudfront.net/user_3IAh7r0CkaIIfxp3ZToY5YPwNt0/bb88294f-2c41-4594-a93d-820b0fb51171.mp4',
+          stillMobile: 'https://d2ol7oe51mr4n9.cloudfront.net/user_3IAh7r0CkaIIfxp3ZToY5YPwNt0/dd7544f7-564f-47f6-83cf-ebc10f68cb04.webp',
+          clipMobile: 'https://d2ol7oe51mr4n9.cloudfront.net/user_3IAh7r0CkaIIfxp3ZToY5YPwNt0/ed786e03-7ca9-48a5-b40d-e22e7a100d1b.mp4',
           accent: '#C9A6FF',
           linger: 0.3,
           eyebrow: 'HOW TO PLAY',
@@ -280,6 +351,11 @@
         'https://d2ol7oe51mr4n9.cloudfront.net/user_3IAh7r0CkaIIfxp3ZToY5YPwNt0/6d0884d6-9a29-451b-bc74-dea109e7b936.mp4',
         'https://d2ol7oe51mr4n9.cloudfront.net/user_3IAh7r0CkaIIfxp3ZToY5YPwNt0/8a948dbe-f3af-4fc6-841b-e8cea1317454.mp4',
       ],
+      connectorsMobile: [
+        'https://d2ol7oe51mr4n9.cloudfront.net/user_3IAh7r0CkaIIfxp3ZToY5YPwNt0/6da5e020-29b2-4eff-870c-0fee79e41dbe.mp4',
+        'https://d2ol7oe51mr4n9.cloudfront.net/user_3IAh7r0CkaIIfxp3ZToY5YPwNt0/a86d0375-7025-497c-bc77-0d5de7c6e252.mp4',
+        'https://d2ol7oe51mr4n9.cloudfront.net/user_3IAh7r0CkaIIfxp3ZToY5YPwNt0/18aed1f9-b7ff-49ae-ad45-1a3d8bb9a36d.mp4',
+      ],
     });
 
     // Brand mark — the user's own SUMMER BREEZE logo artwork (logo.png),
@@ -288,6 +364,130 @@
       var host = document.querySelector('.sw-brand__mark');
       if (!host) return;
       host.innerHTML = '<img src="logo.png" alt="SUMMER BREEZE" style="width:100%;height:100%;object-fit:contain;display:block;">';
+    })();
+
+    // The engine's nav/route-dot click handler (jumpTo) always scrolls to the
+    // MIDDLE of a section's scroll segment — which is the right target for every
+    // other section (it's where that scene's copy peaks), but for the very first
+    // section (About) that mid-point is partway through the intro dive, not the
+    // actual top of the page, so clicking "About" landed somewhere odd instead of
+    // back at the start. Intercept just the About nav item + its route dot and
+    // scroll-to-top instead.
+    //
+    // NOTE: an earlier version of this fix used cloneNode()+replaceChild() to
+    // strip the engine's own click listener before attaching a new one. That
+    // silently broke the route-rail highlighting: the engine caches the route
+    // dot elements once at mount time in an internal `dots` array and toggles
+    // `.is-active` on those cached references every scroll frame — replacing
+    // the DOM node left the engine updating a now-detached clone while the
+    // *visible* dot (our fresh clone) never got its active state touched again,
+    // so it stayed permanently highlighted as "About" no matter which section
+    // was actually active. Fix: don't touch the original elements at all.
+    // Instead, listen on `document` with `capture: true` — capturing-phase
+    // listeners on an ancestor run before the target element's own (bubble-
+    // phase) click listener, so we can stopPropagation() to cancel the
+    // engine's jumpTo() for just these two elements, then do our own scroll,
+    // while every other click (and the engine's own active-state tracking)
+    // is completely unaffected.
+    (function fixAboutNavTarget() {
+      var aboutNavItem = document.querySelector('.sw-nav__item');   // first top-nav pill = About
+      var aboutRouteDot = document.querySelector('.sw-route__dot'); // first route-rail dot = About
+      document.addEventListener('click', function (e) {
+        var isAboutNav = aboutNavItem && aboutNavItem.contains(e.target);
+        var isAboutDot = aboutRouteDot && aboutRouteDot.contains(e.target);
+        if (!isAboutNav && !isAboutDot) return;
+        e.stopPropagation();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, true);
+    })();
+
+    // Engine constraint: every `.sw-copy` article (About/Character/Game/How to
+    // Play's text column) is absolutely positioned at the exact same spot —
+    // they're distinguished only by opacity/pointer-events, which the engine
+    // toggles on the `.sw-copy` element itself every scroll frame (`auto` once
+    // its own fade is >50% in, `none` otherwise). But the engine's own CSS also
+    // hard-sets `.sw-copy__cta { pointer-events: auto; }` (used only by our
+    // last section's "지금 시작하기" button) — and that unconditional rule
+    // overrides the *inactive* parent's `pointer-events:none`, since pointer-
+    // events isn't blocked by an ancestor the way visibility would be. So the
+    // How to Play CTA link stays clickable even while some other section is
+    // showing, sitting invisibly on top of it — and because it's a plain
+    // `href="#"` anchor, a tap that lands on it jumps the whole page to the
+    // very top. This is how it surfaced: on mobile, tapping a Character-section
+    // member-name button actually hit this invisible overlapping CTA instead
+    // and the page jumped to the start. Can't edit the shared engine's CSS, so
+    // mirror each `.sw-copy`'s own pointer-events state onto its own
+    // `.sw-copy__cta` every frame (same idea as setupHUDSync below) — the CTA
+    // is then only ever clickable while its own section is actually active.
+    (function fixCtaPointerEvents() {
+      var ctas = document.querySelectorAll('.sw-copy__cta');
+      if (!ctas.length) return;
+      function loop() {
+        ctas.forEach(function (cta) {
+          var copy = cta.closest('.sw-copy');
+          if (copy) cta.style.pointerEvents = copy.style.pointerEvents || 'none';
+        });
+        requestAnimationFrame(loop);
+      }
+      loop();
+    })();
+
+    // How to Play's "지금 시작하기" CTA (engine config `cta: { primary: { href:'#' } }`,
+    // see mountScrollWorld() above) should launch the actual playable rhythm game
+    // (game.js, window.SBGame) instead of falling through to its default
+    // href="#" jump-to-top behavior. Same capture-phase interception idiom as
+    // fixAboutNavTarget above: catch the click before the engine's own bubble-
+    // phase handler sees it, stopPropagation + preventDefault, then decide.
+    //
+    // Scoped to PC/desktop only, per explicit request — the game is keyboard
+    // (W/A/S/D) only and would be unplayable on a touch device, so a mobile/
+    // touch tap on the CTA shows a brief "PC에서 플레이해주세요" notice instead
+    // of opening a keyboard-only overlay someone on a phone couldn't use.
+    (function wireHowToPlayCta() {
+      function isPc() {
+        var noTouch = !window.matchMedia('(hover: none), (pointer: coarse)').matches;
+        var wideEnough = window.innerWidth > 860; // matches engine's own .sw-nav mobile breakpoint
+        return noTouch && wideEnough;
+      }
+
+      function showPcOnlyNotice() {
+        var existing = document.querySelector('.sbg-pcnotice');
+        if (existing) existing.remove();
+        var style = document.getElementById('sbg-pcnotice-style');
+        if (!style) {
+          style = document.createElement('style');
+          style.id = 'sbg-pcnotice-style';
+          style.textContent =
+            '.sbg-pcnotice{position:fixed;left:50%;bottom:34px;transform:translateX(-50%) translateY(12px);' +
+            'z-index:200;background:rgba(13,24,48,0.92);color:#F5F5FF;font-family:"Gothic A1",sans-serif;' +
+            'font-size:.86rem;font-weight:700;padding:14px 22px;border-radius:999px;' +
+            'border:1px solid rgba(79,214,224,0.4);box-shadow:0 10px 30px rgba(0,0,0,0.35);' +
+            'opacity:0;transition:opacity .25s ease,transform .25s ease;pointer-events:none;text-align:center;}' +
+            '.sbg-pcnotice.show{opacity:1;transform:translateX(-50%) translateY(0);}';
+          document.head.appendChild(style);
+        }
+        var el = document.createElement('div');
+        el.className = 'sbg-pcnotice';
+        el.textContent = '이 리듬게임은 PC에서 플레이해주세요 🖥️';
+        document.body.appendChild(el);
+        requestAnimationFrame(function () { el.classList.add('show'); });
+        setTimeout(function () {
+          el.classList.remove('show');
+          setTimeout(function () { el.remove(); }, 300);
+        }, 2400);
+      }
+
+      document.addEventListener('click', function (e) {
+        var cta = e.target.closest && e.target.closest('.sw-copy__cta a');
+        if (!cta) return;
+        e.preventDefault();
+        e.stopPropagation();
+        if (isPc()) {
+          if (window.SBGame) window.SBGame.open();
+        } else {
+          showPcOnlyNotice();
+        }
+      }, true);
     })();
 
     // The engine renders `title`/`body` as escaped text (by design, to stay safe
@@ -308,7 +508,7 @@
       var bodyHTML = [
         null,
         '완벽하게 다른 다섯 명의 궤도가 겹쳐질 때,<br>비로소 완성되는 하나의 팀.<br>라운드를 클리어할 때마다<br>이들의 이야기도 함께 자라납니다.',
-        '하트 스테이지 위에서, 다섯 곡의 서로 다른 무드를<br>리듬으로 연주하며 그룹의 성장 포인트를<br>쌓아 올리세요.',
+        '하트 스테이지 위에서, 서로 다른 무드의<br>다섯 곡을 연주하며 그룹의 성장 포인트를<br>쌓아 올리세요.',
         '위에서 오는 노트는 W, 아래에서 오는 노트는 S,<br>왼쪽은 A, 오른쪽은 D. 네온 노트 길을 따라 정확한<br>타이밍으로 그룹의 무대를 완성해보세요.',
       ];
       var configExtras = [
@@ -355,27 +555,68 @@
       loop();
     })();
 
-    // Game section: click a song in the setlist to play its mp3. Clicking the
-    // currently-playing song again pauses it; clicking another switches tracks.
-    // The setlist now lives in the floating #sb-hud-game panel (see above) so a
-    // 5-song list can never get clipped by the vertically-centred copy column.
+    // Game section: an album cover + setlist panel, side by side. Clicking a
+    // song in the setlist selects it (swapping the cover art to match) and
+    // toggles play/pause on its mp3, same as before. Clicking the cover art
+    // itself opens/closes a short blurb about the selected album — it doesn't
+    // touch playback. The setlist lives in the floating #sb-hud-game panel
+    // (see above) so a 5-song list + cover can never get clipped by the
+    // vertically-centred copy column.
     (function setupSetlistAudio() {
       var hud = document.getElementById('sb-hud-game');
       if (!hud) return;
+
+      var SONGS = [
+        { file: 'blue_horizon.mp3', cover: 'covers/blue_horizon.jpg', title: 'Blue Horizon', genre: '레트로 신스팝 / 칩튠',
+          desc: '다섯 소녀의 서늘한 여름 무드를 담은 트랙. 청량한 신스팝과 몽환적인 일렉트로닉 댄스 비트를 엮어 시원하면서도 감각적인 여름 분위기.' },
+        { file: 'first_wave.mp3', cover: 'covers/first_wave.jpg', title: 'First Wave', genre: '칩튠 / 8비트 레트로 게임 팝',
+          desc: 'Y2K 감성을 가득 담은 다섯 소녀의 여름 트랙. 통통 튀는 8비트 칩튠 사운드가 마치 아기자기한 미니게임을 플레이하는 듯한 귀엽고 경쾌한 음악.' },
+        { file: 'shining_stage.mp3', cover: 'covers/shining_stage.jpg', title: 'Shining Stage', genre: '퓨처 베이스 / 보컬 찹 일렉트로닉',
+          desc: '다섯 소녀의 당찬 첫 시작을 알리는 데뷔곡. 스포트라이트 아래 후반부로 갈수록 폭발하는 퓨처 베이스 사운드로 첫 무대의 눈부신 설렘과 화려한 퍼포먼스를 그대로 담아낸 트랙.' },
+        { file: 'summer_breeze.mp3', cover: 'covers/summer_breeze.jpg', title: 'Summer Breeze', genre: '퓨처 바운스 / 팝 EDM',
+          desc: '가장 밝은 음색의 팝 EDM 비트와 은은한 애수가 공존하는 핵심 넘버. 보랏빛 노을이 내려앉은 해변 도로와 시원하게 불어오는 여름밤 산들바람의 정취를 완벽히 담아낸 시그니처 팝.' },
+        { file: 'summer_light.mp3', cover: 'covers/summer_light.jpg', title: 'Summer Light', genre: '퓨처 바운스 / 멜로딕 EDM',
+          desc: '눈부신 여름 햇살을 가득 머금은 멜로딕 EDM 넘버. 밝은 톤의 신디사이저와 빠른 템포가 조화를 이루며, 푸른 바닷가를 배경으로 힘차게 점프하듯 기분 좋은 활력을 전하는 트랙.' },
+      ];
+
       hud.innerHTML =
-        '<span class="sb-hud__label">SETLIST</span>' +
-        '<ol class="sb-setlist">' +
-          '<li data-src="audio/blue_horizon.mp3" role="button" tabindex="0"><span class="n">01</span><span class="t">Blue Horizon</span><span class="mood">잔잔하고 조용한</span><span class="play" aria-hidden="true">▶</span></li>' +
-          '<li data-src="audio/first_wave.mp3" role="button" tabindex="0"><span class="n">02</span><span class="t">First Wave</span><span class="mood">격렬하고 강렬한</span><span class="play" aria-hidden="true">▶</span></li>' +
-          '<li data-src="audio/shining_stage.mp3" role="button" tabindex="0"><span class="n">03</span><span class="t">Shining Stage</span><span class="mood">첫 데뷔, 상큼한</span><span class="play" aria-hidden="true">▶</span></li>' +
-          '<li data-src="audio/summer_breeze.mp3" role="button" tabindex="0"><span class="n">04</span><span class="t">Summer Breeze</span><span class="mood">가장 청량한 메인 테마</span><span class="play" aria-hidden="true">▶</span></li>' +
-          '<li data-src="audio/summer_light.mp3" role="button" tabindex="0"><span class="n">05</span><span class="t">Summer Light</span><span class="mood">여름밤, 선선하고 잔잔한</span><span class="play" aria-hidden="true">▶</span></li>' +
-        '</ol>';
+        '<div class="sb-game-panel">' +
+          '<div class="sb-game-cover-col">' +
+            '<div class="sb-game-cover" id="sb-game-cover" role="button" tabindex="0" aria-expanded="false">' +
+              '<img id="sb-game-cover-img" alt="">' +
+              '<span class="sb-game-cover__hint">탭해서 앨범 설명 보기</span>' +
+            '</div>' +
+            '<div class="sb-game-info" id="sb-game-info" hidden>' +
+              '<strong id="sb-game-info-title"></strong>' +
+              '<p id="sb-game-info-desc"></p>' +
+            '</div>' +
+          '</div>' +
+          '<div class="sb-game-setlist-col">' +
+            '<span class="sb-hud__label sb-hud__label--setlist">SETLIST</span>' +
+            '<ol class="sb-setlist" id="sb-setlist"></ol>' +
+          '</div>' +
+        '</div>';
+
+      var listEl = hud.querySelector('#sb-setlist');
+      listEl.innerHTML = SONGS.map(function (s, i) {
+        return '<li data-idx="' + i + '" data-src="audio/' + s.file + '" role="button" tabindex="0">' +
+          '<span class="n">' + String(i + 1).padStart(2, '0') + '</span>' +
+          '<span class="t">' + s.title + '</span>' +
+          '<span class="genre">' + s.genre + '</span>' +
+          '<span class="play" aria-hidden="true">▶</span></li>';
+      }).join('');
 
       var audioEl = document.getElementById('sb-audio');
-      var items = hud.querySelectorAll('.sb-setlist li[data-src]');
-      if (!audioEl || !items.length) return;
-      var current = null;
+      var items = listEl.querySelectorAll('li[data-src]');
+      var coverImg = hud.querySelector('#sb-game-cover-img');
+      var coverBtn = hud.querySelector('#sb-game-cover');
+      var infoBox = hud.querySelector('#sb-game-info');
+      var infoTitle = hud.querySelector('#sb-game-info-title');
+      var infoDesc = hud.querySelector('#sb-game-info-desc');
+      if (!audioEl || !items.length || !coverImg) return;
+
+      var playing = null; // index (into SONGS) currently playing, or null
+
       function stopAll() {
         items.forEach(function (li) {
           li.classList.remove('is-playing');
@@ -383,29 +624,55 @@
           if (p) p.textContent = '▶';
         });
       }
+
+      function showSong(i) {
+        var s = SONGS[i];
+        coverImg.src = s.cover;
+        coverImg.alt = s.title + ' 앨범 표지';
+        infoTitle.textContent = s.title;
+        infoDesc.textContent = s.desc;
+        items.forEach(function (li) {
+          li.classList.toggle('is-selected', Number(li.getAttribute('data-idx')) === i);
+        });
+      }
+
       function playItem(li) {
-        if (current === li && !audioEl.paused) {
+        var i = Number(li.getAttribute('data-idx'));
+        showSong(i);
+        if (playing === i && !audioEl.paused) {
           audioEl.pause();
           stopAll();
-          current = null;
+          playing = null;
           return;
         }
         stopAll();
-        audioEl.src = li.getAttribute('data-src');
+        audioEl.src = 'audio/' + SONGS[i].file;
         audioEl.currentTime = 0;
         audioEl.play().catch(function () {});
         li.classList.add('is-playing');
         var p = li.querySelector('.play');
         if (p) p.textContent = '❚❚';
-        current = li;
+        playing = i;
       }
+
       items.forEach(function (li) {
         li.addEventListener('click', function () { playItem(li); });
         li.addEventListener('keydown', function (e) {
           if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); playItem(li); }
         });
       });
-      audioEl.addEventListener('ended', function () { stopAll(); current = null; });
+      audioEl.addEventListener('ended', function () { stopAll(); playing = null; });
+
+      function toggleInfo() {
+        infoBox.hidden = !infoBox.hidden;
+        coverBtn.setAttribute('aria-expanded', infoBox.hidden ? 'false' : 'true');
+      }
+      coverBtn.addEventListener('click', toggleInfo);
+      coverBtn.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleInfo(); }
+      });
+
+      showSong(0); // Blue Horizon shown by default, matching the setlist's 01 slot
     })();
 
     // Character section: the 5 name-only pills become buttons. Clicking one
@@ -420,31 +687,31 @@
         {
           name: '채이', animal: '여우', age: 23, role: '비주얼 · 메인래퍼', mbti: 'ESTP',
           likes: '번지점프', dislikes: '조용한 분위기, 매운 떡볶이', nation: '태국',
-          debut: '유복한 환경에서 어릴 때부터 아이돌을 꿈꾸다, 한국 오디션에 합격해 데뷔했다.',
+          debut: '유복한 환경에서 어릴 때부터 아이돌을 꿈꾸다, 한국 오디션에 합격해 데뷔.',
           from: '#FF8C7A', to: '#FFE9A8', icon: 'icons/fox.png',
         },
         {
           name: '도희', animal: '검정 고양이', age: 21, role: '리드래퍼 (로우톤)', mbti: 'ISTP',
           likes: '애니메이션', dislikes: '웨이팅', nation: '한국',
-          debut: '아르바이트를 하던 중 캐스팅되어, 짧은 연습생 기간을 거쳐 곧바로 데뷔했다.',
+          debut: '아르바이트를 하던 중 캐스팅되어, 짧은 연습생 기간을 거쳐 곧바로 데뷔.',
           from: '#1B2A4A', to: '#C9A6FF', icon: 'icons/black_cat.png',
         },
         {
           name: '나리', animal: '강아지', age: 22, role: '리더 · 메인보컬', mbti: 'ENFJ',
           likes: '나베 요리', dislikes: '차가운 눈빛', nation: '일본 (한일 혼혈)',
-          debut: '도쿄에서 지내다 한국으로 건너와, 긴 연습생 생활 끝에 데뷔했다.',
+          debut: '도쿄에서 지내다 한국으로 건너와, 긴 연습생 생활 끝에 데뷔.',
           from: '#FFE9A8', to: '#FF8C7A', icon: 'icons/dog.png',
         },
         {
           name: '시월', animal: '뱁새', age: 18, role: '예능치트키 · 서브보컬 + 메인댄서', mbti: 'ESFJ',
           likes: '키링 · 인형 수집', dislikes: '병원', nation: '한국',
-          debut: '고등학생 때 친구 새벽과 함께 오디션에 합격해 나란히 데뷔했다.',
+          debut: '고등학생 때 친구 새벽과 함께 오디션에 합격해 나란히 데뷔.',
           from: '#4FD6E0', to: '#F5F5FF', icon: 'icons/bapsae.png',
         },
         {
           name: '새벽', animal: '토끼', age: 18, role: '퍼포먼스 디렉터 · 리드댄서', mbti: 'ISFP',
           likes: '잠', dislikes: '딱딱한 침대', nation: '한국',
-          debut: '고등학생 때 친구 시월과 함께 오디션에 합격해 나란히 데뷔했다.',
+          debut: '고등학생 때 친구 시월과 함께 오디션에 합격해 나란히 데뷔.',
           from: '#C9A6FF', to: '#F5F5FF', icon: 'icons/rabbit.png',
         },
       ];
