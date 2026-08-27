@@ -39,7 +39,7 @@
   // Pixel Pulse의 analyzeAudioBuffer()와 완전히 동일한 알고리즘을 Node.js에서
   // 오프라인으로 돌려서 생성한 결과(19-1차) — 브라우저에서 fetch()로 다시
   // 받아올 필요 없이 여기 정적으로 박아둔다(file:// 호환을 위해 필수).
-  var BEATMAPS = /*__BEATMAPS__*/{"blue_horizon":{"bpm":185,"duration":19.81,"noteCount":38,"notes":[{"t":5.672,"lane":"a"},{"t":5.834,"lane":"s"},{"t":6.158,"lane":"w"},{"t":6.32,"lane":"w"},{"t":6.482,"lane":"s"},{"t":6.807,"lane":"s"},{"t":6.969,"lane":"a"},{"t":7.131,"lane":"a"},{"t":7.618,"lane":"s"},{"t":7.78,"lane":"a"},{"t":8.266,"lane":"w"},{"t":8.428,"lane":"s"},{"t":8.591,"lane":"a"},{"t":8.753,"lane":"s"},{"t":9.077,"lane":"d"},{"t":9.564,"lane":"w"},{"t":9.726,"lane":"w"},{"t":9.888,"lane":"a"},{"t":10.212,"lane":"s"},{"t":10.374,"lane":"w"},{"t":10.536,"lane":"s"},{"t":10.861,"lane":"s"},{"t":11.574,"lane":"w"},{"t":12.223,"lane":"s"},{"t":12.807,"lane":"a"},{"t":13.52,"lane":"d"},{"t":14.266,"lane":"s"},{"t":14.428,"lane":"s"},{"t":14.915,"lane":"w"},{"t":15.401,"lane":"a"},{"t":15.726,"lane":"a"},{"t":16.05,"lane":"d"},{"t":16.277,"lane":"a"},{"t":16.926,"lane":"a"},{"t":17.574,"lane":"s"},{"t":17.996,"lane":"w"},{"t":18.158,"lane":"a"},{"t":18.645,"lane":"w"}]},"first_wave":{"bpm":108,"duration":227.61,"noteCount":371,"notes":[{"t":0.583,"lane":"w"},{"t":0.861,"lane":"d"},{"t":1.417,"lane":"w"},{"t":1.694,"lane":"s"},{"t":1.972,"lane":"d"},{"t":3.194,"lane":"w"},{"t":3.639,"lane":"a"},{"t":3.917,"lane":"w"},{"t":4.194,"lane":"d"},{"t":4.75,"lane":"s"},{"t":5.583,"lane":"d"},{"t":5.972,"lane":"s"},{"t":6.806,"lane":"s"},{"t":8.194,"lane":"a"},{"t":8.917,"lane":"s"},{"t":9.194,"lane":"a"},{"t":9.75,"lane":"w"},{"t":10.028,"lane":"a"},{"t":10.306,"lane":"d"},{"t":10.583,"lane":"a"},{"t":11.139,"lane":"w"},{"t":11.528,"lane":"d"},{"t":12.806,"lane":"a"},{"t":13.083,"lane":"s"},{"t":13.361,"lane":"d"},{"t":13.639,"lane":"d"},{"t":14.472,"lane":"a"},{"t":14.75,"lane":"a"},{"t":15.028,"lane":"s"},{"t":15.306,"lane":"d"},{"t":15.861,"lane":"w"},{"t":16.417,"lane":"s"},{"t":16.972,"lane":"w"},{"t":17.25,"lane":"d"},{"t":17.528,"lane":"s"},{"t":18.083,"lane":"s"},{"t":18.639,"lane":"a"},{"t":19.194,"lane":"a"},{"t":19.75,"lane":"s"},{"t":20.583,"lane":"a"},{"t":21.139,"lane":"s"},{"t":21.694,"lane":"s"},{"t":22.639,"lane":"d"},{"t":23.361,"lane":"a"},{"t":23.917,"lane":"s"},{"t":24.472,"lane":"s"},{"t":25.028,"lane":"d"},{"t":25.583,"lane":"w"},{"t":26.139,"lane":"d"},{"t":26.694,"lane":"w"},{"t":27.25,"lane":"d"},{"t":27.806,"lane":"w"},{"t":28.083,"lane":"a"},{"t":28.361,"lane":"d"},{"t":28.917,"lane":"w"},{"t":29.472,"lane":"d"},{"t":30.028,"lane":"a"},{"t":30.583,"lane":"w"},{"t":31.139,"lane":"a"},{"t":31.694,"lane":"s"},{"t":32.25,"lane":"s"},{"t":32.806,"lane":"a"},{"t":33.361,"lane":"a"},{"t":33.917,"lane":"s"},{"t":34.472,"lane":"w"},{"t":35.028,"lane":"w"},{"t":35.306,"lane":"a"},{"t":35.861,"lane":"s"},{"t":36.417,"lane":"d"},{"t":36.806,"lane":"s"},{"t":38.056,"lane":"s"},{"t":38.639,"lane":"d"},{"t":39.194,"lane":"s"},{"t":39.75,"lane":"d"},{"t":40.306,"lane":"s"},{"t":40.861,"lane":"w"},{"t":41.417,"lane":"w"},{"t":41.972,"lane":"a"},{"t":42.528,"lane":"a"},{"t":43.083,"lane":"s"},{"t":43.639,"lane":"s"},{"t":44.194,"lane":"d"},{"t":44.75,"lane":"a"},{"t":45.306,"lane":"w"},{"t":45.861,"lane":"s"},{"t":46.417,"lane":"s"},{"t":46.972,"lane":"a"},{"t":47.528,"lane":"s"},{"t":48.083,"lane":"s"},{"t":48.639,"lane":"w"},{"t":49.194,"lane":"a"},{"t":49.75,"lane":"w"},{"t":50.028,"lane":"a"},{"t":51.472,"lane":"s"},{"t":52.194,"lane":"a"},{"t":53.361,"lane":"d"},{"t":53.917,"lane":"w"},{"t":54.194,"lane":"s"},{"t":54.472,"lane":"d"},{"t":55.028,"lane":"s"},{"t":55.583,"lane":"s"},{"t":56.139,"lane":"w"},{"t":56.694,"lane":"s"},{"t":57.25,"lane":"d"},{"t":57.806,"lane":"s"},{"t":58.361,"lane":"d"},{"t":58.917,"lane":"s"},{"t":59.472,"lane":"a"},{"t":60.028,"lane":"d"},{"t":60.583,"lane":"d"},{"t":61.139,"lane":"w"},{"t":61.694,"lane":"w"},{"t":62.25,"lane":"a"},{"t":62.806,"lane":"w"},{"t":63.361,"lane":"s"},{"t":63.917,"lane":"d"},{"t":64.472,"lane":"d"},{"t":65.028,"lane":"w"},{"t":65.861,"lane":"a"},{"t":66.861,"lane":"s"},{"t":67.306,"lane":"a"},{"t":67.472,"lane":"d"},{"t":68.639,"lane":"a"},{"t":69.194,"lane":"w"},{"t":69.75,"lane":"a"},{"t":70.306,"lane":"d"},{"t":70.583,"lane":"s"},{"t":70.861,"lane":"a"},{"t":71.139,"lane":"w"},{"t":71.972,"lane":"w"},{"t":72.528,"lane":"s"},{"t":73.083,"lane":"s"},{"t":73.639,"lane":"a"},{"t":74.194,"lane":"w"},{"t":74.75,"lane":"d"},{"t":75.306,"lane":"w"},{"t":75.861,"lane":"d"},{"t":76.417,"lane":"s"},{"t":76.972,"lane":"s"},{"t":77.528,"lane":"a"},{"t":78.083,"lane":"d"},{"t":78.639,"lane":"s"},{"t":79.194,"lane":"s"},{"t":79.75,"lane":"a"},{"t":80.583,"lane":"s"},{"t":81.028,"lane":"a"},{"t":82.028,"lane":"w"},{"t":82.75,"lane":"d"},{"t":83.361,"lane":"a"},{"t":83.917,"lane":"s"},{"t":84.472,"lane":"a"},{"t":85.028,"lane":"a"},{"t":85.306,"lane":"w"},{"t":85.583,"lane":"d"},{"t":86.139,"lane":"a"},{"t":86.694,"lane":"d"},{"t":87.25,"lane":"d"},{"t":87.806,"lane":"s"},{"t":88.083,"lane":"d"},{"t":88.361,"lane":"d"},{"t":88.917,"lane":"w"},{"t":89.472,"lane":"d"},{"t":89.75,"lane":"d"},{"t":90.028,"lane":"w"},{"t":90.583,"lane":"a"},{"t":91.139,"lane":"a"},{"t":91.694,"lane":"w"},{"t":92.25,"lane":"a"},{"t":92.806,"lane":"a"},{"t":93.361,"lane":"s"},{"t":93.917,"lane":"a"},{"t":94.472,"lane":"s"},{"t":95.028,"lane":"s"},{"t":95.306,"lane":"a"},{"t":96.75,"lane":"w"},{"t":97.472,"lane":"w"},{"t":98.639,"lane":"a"},{"t":99.194,"lane":"s"},{"t":99.75,"lane":"d"},{"t":100.306,"lane":"s"},{"t":100.861,"lane":"s"},{"t":101.417,"lane":"d"},{"t":101.972,"lane":"w"},{"t":102.528,"lane":"s"},{"t":103.083,"lane":"a"},{"t":103.639,"lane":"w"},{"t":104.194,"lane":"w"},{"t":104.75,"lane":"a"},{"t":105.306,"lane":"a"},{"t":105.861,"lane":"w"},{"t":106.417,"lane":"d"},{"t":106.972,"lane":"a"},{"t":107.528,"lane":"d"},{"t":108.083,"lane":"s"},{"t":108.639,"lane":"a"},{"t":108.917,"lane":"a"},{"t":109.194,"lane":"w"},{"t":109.75,"lane":"s"},{"t":110.306,"lane":"s"},{"t":111.472,"lane":"a"},{"t":112.194,"lane":"w"},{"t":113.361,"lane":"a"},{"t":113.917,"lane":"w"},{"t":114.472,"lane":"s"},{"t":115.028,"lane":"d"},{"t":115.583,"lane":"d"},{"t":116.139,"lane":"s"},{"t":116.694,"lane":"a"},{"t":117.25,"lane":"d"},{"t":117.806,"lane":"s"},{"t":118.361,"lane":"w"},{"t":118.917,"lane":"a"},{"t":119.472,"lane":"w"},{"t":120.028,"lane":"d"},{"t":120.583,"lane":"a"},{"t":121.139,"lane":"d"},{"t":121.694,"lane":"d"},{"t":122.25,"lane":"a"},{"t":122.806,"lane":"a"},{"t":123.361,"lane":"w"},{"t":123.917,"lane":"a"},{"t":124.472,"lane":"d"},{"t":125.028,"lane":"a"},{"t":125.861,"lane":"d"},{"t":126.75,"lane":"s"},{"t":128.028,"lane":"a"},{"t":128.639,"lane":"a"},{"t":129.194,"lane":"d"},{"t":129.75,"lane":"w"},{"t":130.306,"lane":"w"},{"t":130.861,"lane":"s"},{"t":131.417,"lane":"d"},{"t":131.972,"lane":"a"},{"t":132.528,"lane":"d"},{"t":133.083,"lane":"w"},{"t":133.639,"lane":"s"},{"t":134.194,"lane":"w"},{"t":134.75,"lane":"w"},{"t":135.306,"lane":"a"},{"t":135.861,"lane":"a"},{"t":136.417,"lane":"s"},{"t":136.972,"lane":"a"},{"t":137.528,"lane":"d"},{"t":138.083,"lane":"w"},{"t":138.639,"lane":"w"},{"t":139.194,"lane":"s"},{"t":139.472,"lane":"d"},{"t":139.75,"lane":"d"},{"t":140.028,"lane":"w"},{"t":140.583,"lane":"a"},{"t":141.528,"lane":"d"},{"t":142.639,"lane":"a"},{"t":143.917,"lane":"s"},{"t":144.194,"lane":"a"},{"t":144.472,"lane":"d"},{"t":145.028,"lane":"d"},{"t":145.306,"lane":"a"},{"t":145.583,"lane":"d"},{"t":146.139,"lane":"d"},{"t":146.417,"lane":"s"},{"t":146.694,"lane":"w"},{"t":147.25,"lane":"s"},{"t":147.528,"lane":"s"},{"t":147.806,"lane":"a"},{"t":148.639,"lane":"a"},{"t":148.917,"lane":"s"},{"t":149.472,"lane":"a"},{"t":149.75,"lane":"s"},{"t":150.028,"lane":"a"},{"t":150.583,"lane":"d"},{"t":150.861,"lane":"s"},{"t":151.139,"lane":"d"},{"t":151.694,"lane":"a"},{"t":151.972,"lane":"d"},{"t":152.25,"lane":"d"},{"t":152.806,"lane":"w"},{"t":153.083,"lane":"a"},{"t":153.361,"lane":"w"},{"t":153.917,"lane":"w"},{"t":154.472,"lane":"d"},{"t":154.75,"lane":"w"},{"t":155.625,"lane":"s"},{"t":156.389,"lane":"s"},{"t":157.431,"lane":"d"},{"t":157.806,"lane":"a"},{"t":158.639,"lane":"s"},{"t":158.917,"lane":"a"},{"t":159.306,"lane":"a"},{"t":160.583,"lane":"s"},{"t":161.25,"lane":"s"},{"t":162.25,"lane":"w"},{"t":162.972,"lane":"s"},{"t":163.583,"lane":"s"},{"t":164.75,"lane":"w"},{"t":166.194,"lane":"d"},{"t":166.694,"lane":"w"},{"t":167.361,"lane":"s"},{"t":168.361,"lane":"s"},{"t":169.583,"lane":"w"},{"t":171.25,"lane":"d"},{"t":172.917,"lane":"d"},{"t":173.194,"lane":"w"},{"t":174.194,"lane":"s"},{"t":174.75,"lane":"a"},{"t":175.583,"lane":"w"},{"t":175.861,"lane":"w"},{"t":176.139,"lane":"s"},{"t":176.694,"lane":"d"},{"t":177.25,"lane":"s"},{"t":177.806,"lane":"s"},{"t":178.361,"lane":"w"},{"t":178.917,"lane":"d"},{"t":179.472,"lane":"s"},{"t":180.028,"lane":"d"},{"t":180.583,"lane":"w"},{"t":181.139,"lane":"w"},{"t":181.694,"lane":"s"},{"t":182.25,"lane":"w"},{"t":182.806,"lane":"d"},{"t":183.361,"lane":"a"},{"t":183.917,"lane":"s"},{"t":184.472,"lane":"a"},{"t":184.75,"lane":"d"},{"t":185.75,"lane":"d"},{"t":186.194,"lane":"s"},{"t":187.472,"lane":"w"},{"t":188.083,"lane":"s"},{"t":188.639,"lane":"a"},{"t":189.194,"lane":"s"},{"t":189.75,"lane":"a"},{"t":190.306,"lane":"d"},{"t":190.861,"lane":"a"},{"t":191.417,"lane":"a"},{"t":191.972,"lane":"w"},{"t":192.528,"lane":"d"},{"t":193.083,"lane":"w"},{"t":193.639,"lane":"a"},{"t":193.917,"lane":"d"},{"t":194.194,"lane":"d"},{"t":194.472,"lane":"w"},{"t":195.306,"lane":"s"},{"t":195.861,"lane":"d"},{"t":196.417,"lane":"w"},{"t":196.972,"lane":"w"},{"t":197.528,"lane":"d"},{"t":198.083,"lane":"s"},{"t":198.639,"lane":"a"},{"t":199.194,"lane":"d"},{"t":199.75,"lane":"a"},{"t":200.417,"lane":"d"},{"t":200.972,"lane":"w"},{"t":202.083,"lane":"d"},{"t":203.194,"lane":"a"},{"t":203.917,"lane":"a"},{"t":204.472,"lane":"w"},{"t":205.028,"lane":"d"},{"t":205.583,"lane":"w"},{"t":206.139,"lane":"w"},{"t":206.694,"lane":"a"},{"t":207.25,"lane":"a"},{"t":207.806,"lane":"d"},{"t":208.361,"lane":"s"},{"t":208.917,"lane":"w"},{"t":209.472,"lane":"a"},{"t":210.028,"lane":"s"},{"t":210.583,"lane":"d"},{"t":211.139,"lane":"w"},{"t":211.694,"lane":"a"},{"t":211.972,"lane":"d"},{"t":212.25,"lane":"a"},{"t":212.528,"lane":"a"}]},"shining_stage":{"bpm":129,"duration":30.01,"noteCount":64,"notes":[{"t":2.326,"lane":"s"},{"t":3.023,"lane":"a"},{"t":3.488,"lane":"w"},{"t":3.721,"lane":"a"},{"t":3.953,"lane":"d"},{"t":4.419,"lane":"d"},{"t":5.116,"lane":"a"},{"t":5.581,"lane":"w"},{"t":5.814,"lane":"d"},{"t":6.279,"lane":"a"},{"t":6.744,"lane":"w"},{"t":7.209,"lane":"d"},{"t":7.442,"lane":"s"},{"t":8.14,"lane":"w"},{"t":9.07,"lane":"d"},{"t":9.302,"lane":"d"},{"t":9.767,"lane":"a"},{"t":10,"lane":"w"},{"t":10.233,"lane":"a"},{"t":10.698,"lane":"a"},{"t":11.163,"lane":"d"},{"t":11.628,"lane":"d"},{"t":12.093,"lane":"s"},{"t":12.326,"lane":"d"},{"t":12.558,"lane":"d"},{"t":13.023,"lane":"a"},{"t":13.488,"lane":"w"},{"t":13.953,"lane":"s"},{"t":14.419,"lane":"s"},{"t":14.884,"lane":"w"},{"t":15.349,"lane":"w"},{"t":15.814,"lane":"s"},{"t":16.062,"lane":"s"},{"t":16.977,"lane":"a"},{"t":17.442,"lane":"w"},{"t":17.907,"lane":"d"},{"t":18.372,"lane":"w"},{"t":18.837,"lane":"w"},{"t":19.302,"lane":"d"},{"t":19.767,"lane":"s"},{"t":20,"lane":"a"},{"t":20.233,"lane":"a"},{"t":20.698,"lane":"w"},{"t":20.93,"lane":"a"},{"t":21.163,"lane":"d"},{"t":21.628,"lane":"s"},{"t":22.093,"lane":"a"},{"t":22.558,"lane":"a"},{"t":23.023,"lane":"w"},{"t":23.488,"lane":"d"},{"t":23.721,"lane":"w"},{"t":24.651,"lane":"w"},{"t":25.116,"lane":"d"},{"t":25.581,"lane":"s"},{"t":26.047,"lane":"s"},{"t":26.512,"lane":"d"},{"t":26.977,"lane":"a"},{"t":27.442,"lane":"s"},{"t":27.907,"lane":"w"},{"t":28.372,"lane":"w"},{"t":28.605,"lane":"a"},{"t":28.837,"lane":"w"},{"t":29.302,"lane":"a"},{"t":29.767,"lane":"w"}]},"summer_breeze":{"bpm":172,"duration":30.01,"noteCount":88,"notes":[{"t":0.235,"lane":"w"},{"t":0.584,"lane":"s"},{"t":1.108,"lane":"s"},{"t":1.456,"lane":"w"},{"t":1.875,"lane":"a"},{"t":2.573,"lane":"d"},{"t":3.026,"lane":"a"},{"t":3.212,"lane":"a"},{"t":3.852,"lane":"d"},{"t":4.142,"lane":"d"},{"t":4.782,"lane":"w"},{"t":5.596,"lane":"d"},{"t":5.817,"lane":"w"},{"t":6.41,"lane":"s"},{"t":6.759,"lane":"a"},{"t":7.387,"lane":"d"},{"t":7.561,"lane":"a"},{"t":8.084,"lane":"d"},{"t":8.433,"lane":"s"},{"t":8.956,"lane":"a"},{"t":9.48,"lane":"s"},{"t":9.654,"lane":"s"},{"t":10.177,"lane":"a"},{"t":10.352,"lane":"s"},{"t":10.526,"lane":"s"},{"t":10.701,"lane":"d"},{"t":11.224,"lane":"a"},{"t":11.573,"lane":"a"},{"t":12.096,"lane":"w"},{"t":12.445,"lane":"w"},{"t":12.794,"lane":"a"},{"t":12.968,"lane":"s"},{"t":13.142,"lane":"a"},{"t":13.491,"lane":"s"},{"t":14.015,"lane":"w"},{"t":14.363,"lane":"s"},{"t":14.887,"lane":"w"},{"t":15.235,"lane":"w"},{"t":15.584,"lane":"a"},{"t":15.759,"lane":"d"},{"t":16.108,"lane":"d"},{"t":16.282,"lane":"a"},{"t":16.805,"lane":"w"},{"t":17.154,"lane":"w"},{"t":17.677,"lane":"d"},{"t":17.852,"lane":"s"},{"t":18.026,"lane":"d"},{"t":18.375,"lane":"w"},{"t":18.724,"lane":"w"},{"t":19.073,"lane":"s"},{"t":19.422,"lane":"a"},{"t":19.945,"lane":"a"},{"t":20.119,"lane":"d"},{"t":20.294,"lane":"a"},{"t":20.468,"lane":"d"},{"t":20.817,"lane":"a"},{"t":20.991,"lane":"d"},{"t":21.166,"lane":"s"},{"t":21.34,"lane":"s"},{"t":21.689,"lane":"d"},{"t":22.038,"lane":"w"},{"t":22.387,"lane":"d"},{"t":22.735,"lane":"d"},{"t":23.259,"lane":"w"},{"t":23.608,"lane":"s"},{"t":23.956,"lane":"a"},{"t":24.131,"lane":"w"},{"t":24.654,"lane":"d"},{"t":24.828,"lane":"d"},{"t":25.177,"lane":"s"},{"t":25.526,"lane":"s"},{"t":25.701,"lane":"a"},{"t":26.049,"lane":"w"},{"t":26.224,"lane":"s"},{"t":26.398,"lane":"w"},{"t":26.747,"lane":"w"},{"t":26.922,"lane":"a"},{"t":27.27,"lane":"w"},{"t":27.445,"lane":"a"},{"t":27.619,"lane":"d"},{"t":27.968,"lane":"a"},{"t":28.491,"lane":"d"},{"t":28.666,"lane":"d"},{"t":29.015,"lane":"a"},{"t":29.189,"lane":"a"},{"t":29.363,"lane":"w"},{"t":29.538,"lane":"d"},{"t":29.887,"lane":"s"}]},"summer_light":{"bpm":108,"duration":19.81,"noteCount":32,"notes":[{"t":0.285,"lane":"a"},{"t":0.84,"lane":"a"},{"t":1.118,"lane":"d"},{"t":1.951,"lane":"s"},{"t":2.507,"lane":"a"},{"t":2.785,"lane":"d"},{"t":3.062,"lane":"d"},{"t":3.618,"lane":"s"},{"t":4.451,"lane":"d"},{"t":5.007,"lane":"s"},{"t":5.285,"lane":"s"},{"t":5.562,"lane":"d"},{"t":6.118,"lane":"a"},{"t":6.674,"lane":"d"},{"t":6.951,"lane":"w"},{"t":7.507,"lane":"w"},{"t":7.785,"lane":"d"},{"t":8.062,"lane":"d"},{"t":8.618,"lane":"w"},{"t":9.174,"lane":"d"},{"t":9.451,"lane":"w"},{"t":10.007,"lane":"a"},{"t":10.563,"lane":"w"},{"t":11.118,"lane":"s"},{"t":11.951,"lane":"d"},{"t":12.229,"lane":"s"},{"t":12.507,"lane":"a"},{"t":13.063,"lane":"a"},{"t":13.618,"lane":"s"},{"t":14.451,"lane":"a"},{"t":15.007,"lane":"s"},{"t":15.563,"lane":"a"}]}}/*__END_BEATMAPS__*/;
+  var BEATMAPS = /*__BEATMAPS__*/{"blue_horizon":{"bpm":185,"duration":19.81,"noteCount":27,"notes":[{"t":5.603,"lane":"a"},{"t":5.927,"lane":"s"},{"t":6.251,"lane":"w"},{"t":6.576,"lane":"w"},{"t":7.549,"lane":"s"},{"t":7.873,"lane":"s"},{"t":8.197,"lane":"a"},{"t":8.522,"lane":"a"},{"t":9.17,"lane":"s"},{"t":9.819,"lane":"a"},{"t":10.468,"lane":"w"},{"t":10.792,"lane":"s"},{"t":11.441,"lane":"a"},{"t":12.316,"lane":"s"},{"t":12.738,"lane":"d"},{"t":13.386,"lane":"w"},{"t":13.614,"lane":"w"},{"t":14.019,"lane":"a"},{"t":14.359,"lane":"s"},{"t":14.684,"lane":"w"},{"t":15.008,"lane":"s"},{"t":15.981,"lane":"s"},{"t":16.305,"lane":"w"},{"t":16.954,"lane":"s"},{"t":17.278,"lane":"a"},{"t":17.927,"lane":"d"},{"t":18.251,"lane":"s"}]},"first_wave":{"bpm":108,"duration":227.61,"noteCount":371,"notes":[{"t":0.583,"lane":"w"},{"t":0.861,"lane":"d"},{"t":1.417,"lane":"w"},{"t":1.694,"lane":"s"},{"t":1.972,"lane":"d"},{"t":3.194,"lane":"w"},{"t":3.639,"lane":"a"},{"t":3.917,"lane":"w"},{"t":4.194,"lane":"d"},{"t":4.75,"lane":"s"},{"t":5.583,"lane":"d"},{"t":5.972,"lane":"s"},{"t":6.806,"lane":"s"},{"t":8.194,"lane":"a"},{"t":8.917,"lane":"s"},{"t":9.194,"lane":"a"},{"t":9.75,"lane":"w"},{"t":10.028,"lane":"a"},{"t":10.306,"lane":"d"},{"t":10.583,"lane":"a"},{"t":11.139,"lane":"w"},{"t":11.528,"lane":"d"},{"t":12.806,"lane":"a"},{"t":13.083,"lane":"s"},{"t":13.361,"lane":"d"},{"t":13.639,"lane":"d"},{"t":14.472,"lane":"a"},{"t":14.75,"lane":"a"},{"t":15.028,"lane":"s"},{"t":15.306,"lane":"d"},{"t":15.861,"lane":"w"},{"t":16.417,"lane":"s"},{"t":16.972,"lane":"w"},{"t":17.25,"lane":"d"},{"t":17.528,"lane":"s"},{"t":18.083,"lane":"s"},{"t":18.639,"lane":"a"},{"t":19.194,"lane":"a"},{"t":19.75,"lane":"s"},{"t":20.583,"lane":"a"},{"t":21.139,"lane":"s"},{"t":21.694,"lane":"s"},{"t":22.639,"lane":"d"},{"t":23.361,"lane":"a"},{"t":23.917,"lane":"s"},{"t":24.472,"lane":"s"},{"t":25.028,"lane":"d"},{"t":25.583,"lane":"w"},{"t":26.139,"lane":"d"},{"t":26.694,"lane":"w"},{"t":27.25,"lane":"d"},{"t":27.806,"lane":"w"},{"t":28.083,"lane":"a"},{"t":28.361,"lane":"d"},{"t":28.917,"lane":"w"},{"t":29.472,"lane":"d"},{"t":30.028,"lane":"a"},{"t":30.583,"lane":"w"},{"t":31.139,"lane":"a"},{"t":31.694,"lane":"s"},{"t":32.25,"lane":"s"},{"t":32.806,"lane":"a"},{"t":33.361,"lane":"a"},{"t":33.917,"lane":"s"},{"t":34.472,"lane":"w"},{"t":35.028,"lane":"w"},{"t":35.306,"lane":"a"},{"t":35.861,"lane":"s"},{"t":36.417,"lane":"d"},{"t":36.806,"lane":"s"},{"t":38.056,"lane":"s"},{"t":38.639,"lane":"d"},{"t":39.194,"lane":"s"},{"t":39.75,"lane":"d"},{"t":40.306,"lane":"s"},{"t":40.861,"lane":"w"},{"t":41.417,"lane":"w"},{"t":41.972,"lane":"a"},{"t":42.528,"lane":"a"},{"t":43.083,"lane":"s"},{"t":43.639,"lane":"s"},{"t":44.194,"lane":"d"},{"t":44.75,"lane":"a"},{"t":45.306,"lane":"w"},{"t":45.861,"lane":"s"},{"t":46.417,"lane":"s"},{"t":46.972,"lane":"a"},{"t":47.528,"lane":"s"},{"t":48.083,"lane":"s"},{"t":48.639,"lane":"w"},{"t":49.194,"lane":"a"},{"t":49.75,"lane":"w"},{"t":50.028,"lane":"a"},{"t":51.472,"lane":"s"},{"t":52.194,"lane":"a"},{"t":53.361,"lane":"d"},{"t":53.917,"lane":"w"},{"t":54.194,"lane":"s"},{"t":54.472,"lane":"d"},{"t":55.028,"lane":"s"},{"t":55.583,"lane":"s"},{"t":56.139,"lane":"w"},{"t":56.694,"lane":"s"},{"t":57.25,"lane":"d"},{"t":57.806,"lane":"s"},{"t":58.361,"lane":"d"},{"t":58.917,"lane":"s"},{"t":59.472,"lane":"a"},{"t":60.028,"lane":"d"},{"t":60.583,"lane":"d"},{"t":61.139,"lane":"w"},{"t":61.694,"lane":"w"},{"t":62.25,"lane":"a"},{"t":62.806,"lane":"w"},{"t":63.361,"lane":"s"},{"t":63.917,"lane":"d"},{"t":64.472,"lane":"d"},{"t":65.028,"lane":"w"},{"t":65.861,"lane":"a"},{"t":66.861,"lane":"s"},{"t":67.306,"lane":"a"},{"t":67.472,"lane":"d"},{"t":68.639,"lane":"a"},{"t":69.194,"lane":"w"},{"t":69.75,"lane":"a"},{"t":70.306,"lane":"d"},{"t":70.583,"lane":"s"},{"t":70.861,"lane":"a"},{"t":71.139,"lane":"w"},{"t":71.972,"lane":"w"},{"t":72.528,"lane":"s"},{"t":73.083,"lane":"s"},{"t":73.639,"lane":"a"},{"t":74.194,"lane":"w"},{"t":74.75,"lane":"d"},{"t":75.306,"lane":"w"},{"t":75.861,"lane":"d"},{"t":76.417,"lane":"s"},{"t":76.972,"lane":"s"},{"t":77.528,"lane":"a"},{"t":78.083,"lane":"d"},{"t":78.639,"lane":"s"},{"t":79.194,"lane":"s"},{"t":79.75,"lane":"a"},{"t":80.583,"lane":"s"},{"t":81.028,"lane":"a"},{"t":82.028,"lane":"w"},{"t":82.75,"lane":"d"},{"t":83.361,"lane":"a"},{"t":83.917,"lane":"s"},{"t":84.472,"lane":"a"},{"t":85.028,"lane":"a"},{"t":85.306,"lane":"w"},{"t":85.583,"lane":"d"},{"t":86.139,"lane":"a"},{"t":86.694,"lane":"d"},{"t":87.25,"lane":"d"},{"t":87.806,"lane":"s"},{"t":88.083,"lane":"d"},{"t":88.361,"lane":"d"},{"t":88.917,"lane":"w"},{"t":89.472,"lane":"d"},{"t":89.75,"lane":"d"},{"t":90.028,"lane":"w"},{"t":90.583,"lane":"a"},{"t":91.139,"lane":"a"},{"t":91.694,"lane":"w"},{"t":92.25,"lane":"a"},{"t":92.806,"lane":"a"},{"t":93.361,"lane":"s"},{"t":93.917,"lane":"a"},{"t":94.472,"lane":"s"},{"t":95.028,"lane":"s"},{"t":95.306,"lane":"a"},{"t":96.75,"lane":"w"},{"t":97.472,"lane":"w"},{"t":98.639,"lane":"a"},{"t":99.194,"lane":"s"},{"t":99.75,"lane":"d"},{"t":100.306,"lane":"s"},{"t":100.861,"lane":"s"},{"t":101.417,"lane":"d"},{"t":101.972,"lane":"w"},{"t":102.528,"lane":"s"},{"t":103.083,"lane":"a"},{"t":103.639,"lane":"w"},{"t":104.194,"lane":"w"},{"t":104.75,"lane":"a"},{"t":105.306,"lane":"a"},{"t":105.861,"lane":"w"},{"t":106.417,"lane":"d"},{"t":106.972,"lane":"a"},{"t":107.528,"lane":"d"},{"t":108.083,"lane":"s"},{"t":108.639,"lane":"a"},{"t":108.917,"lane":"a"},{"t":109.194,"lane":"w"},{"t":109.75,"lane":"s"},{"t":110.306,"lane":"s"},{"t":111.472,"lane":"a"},{"t":112.194,"lane":"w"},{"t":113.361,"lane":"a"},{"t":113.917,"lane":"w"},{"t":114.472,"lane":"s"},{"t":115.028,"lane":"d"},{"t":115.583,"lane":"d"},{"t":116.139,"lane":"s"},{"t":116.694,"lane":"a"},{"t":117.25,"lane":"d"},{"t":117.806,"lane":"s"},{"t":118.361,"lane":"w"},{"t":118.917,"lane":"a"},{"t":119.472,"lane":"w"},{"t":120.028,"lane":"d"},{"t":120.583,"lane":"a"},{"t":121.139,"lane":"d"},{"t":121.694,"lane":"d"},{"t":122.25,"lane":"a"},{"t":122.806,"lane":"a"},{"t":123.361,"lane":"w"},{"t":123.917,"lane":"a"},{"t":124.472,"lane":"d"},{"t":125.028,"lane":"a"},{"t":125.861,"lane":"d"},{"t":126.75,"lane":"s"},{"t":128.028,"lane":"a"},{"t":128.639,"lane":"a"},{"t":129.194,"lane":"d"},{"t":129.75,"lane":"w"},{"t":130.306,"lane":"w"},{"t":130.861,"lane":"s"},{"t":131.417,"lane":"d"},{"t":131.972,"lane":"a"},{"t":132.528,"lane":"d"},{"t":133.083,"lane":"w"},{"t":133.639,"lane":"s"},{"t":134.194,"lane":"w"},{"t":134.75,"lane":"w"},{"t":135.306,"lane":"a"},{"t":135.861,"lane":"a"},{"t":136.417,"lane":"s"},{"t":136.972,"lane":"a"},{"t":137.528,"lane":"d"},{"t":138.083,"lane":"w"},{"t":138.639,"lane":"w"},{"t":139.194,"lane":"s"},{"t":139.472,"lane":"d"},{"t":139.75,"lane":"d"},{"t":140.028,"lane":"w"},{"t":140.583,"lane":"a"},{"t":141.528,"lane":"d"},{"t":142.639,"lane":"a"},{"t":143.917,"lane":"s"},{"t":144.194,"lane":"a"},{"t":144.472,"lane":"d"},{"t":145.028,"lane":"d"},{"t":145.306,"lane":"a"},{"t":145.583,"lane":"d"},{"t":146.139,"lane":"d"},{"t":146.417,"lane":"s"},{"t":146.694,"lane":"w"},{"t":147.25,"lane":"s"},{"t":147.528,"lane":"s"},{"t":147.806,"lane":"a"},{"t":148.639,"lane":"a"},{"t":148.917,"lane":"s"},{"t":149.472,"lane":"a"},{"t":149.75,"lane":"s"},{"t":150.028,"lane":"a"},{"t":150.583,"lane":"d"},{"t":150.861,"lane":"s"},{"t":151.139,"lane":"d"},{"t":151.694,"lane":"a"},{"t":151.972,"lane":"d"},{"t":152.25,"lane":"d"},{"t":152.806,"lane":"w"},{"t":153.083,"lane":"a"},{"t":153.361,"lane":"w"},{"t":153.917,"lane":"w"},{"t":154.472,"lane":"d"},{"t":154.75,"lane":"w"},{"t":155.625,"lane":"s"},{"t":156.389,"lane":"s"},{"t":157.431,"lane":"d"},{"t":157.806,"lane":"a"},{"t":158.639,"lane":"s"},{"t":158.917,"lane":"a"},{"t":159.306,"lane":"a"},{"t":160.583,"lane":"s"},{"t":161.25,"lane":"s"},{"t":162.25,"lane":"w"},{"t":162.972,"lane":"s"},{"t":163.583,"lane":"s"},{"t":164.75,"lane":"w"},{"t":166.194,"lane":"d"},{"t":166.694,"lane":"w"},{"t":167.361,"lane":"s"},{"t":168.361,"lane":"s"},{"t":169.583,"lane":"w"},{"t":171.25,"lane":"d"},{"t":172.917,"lane":"d"},{"t":173.194,"lane":"w"},{"t":174.194,"lane":"s"},{"t":174.75,"lane":"a"},{"t":175.583,"lane":"w"},{"t":175.861,"lane":"w"},{"t":176.139,"lane":"s"},{"t":176.694,"lane":"d"},{"t":177.25,"lane":"s"},{"t":177.806,"lane":"s"},{"t":178.361,"lane":"w"},{"t":178.917,"lane":"d"},{"t":179.472,"lane":"s"},{"t":180.028,"lane":"d"},{"t":180.583,"lane":"w"},{"t":181.139,"lane":"w"},{"t":181.694,"lane":"s"},{"t":182.25,"lane":"w"},{"t":182.806,"lane":"d"},{"t":183.361,"lane":"a"},{"t":183.917,"lane":"s"},{"t":184.472,"lane":"a"},{"t":184.75,"lane":"d"},{"t":185.75,"lane":"d"},{"t":186.194,"lane":"s"},{"t":187.472,"lane":"w"},{"t":188.083,"lane":"s"},{"t":188.639,"lane":"a"},{"t":189.194,"lane":"s"},{"t":189.75,"lane":"a"},{"t":190.306,"lane":"d"},{"t":190.861,"lane":"a"},{"t":191.417,"lane":"a"},{"t":191.972,"lane":"w"},{"t":192.528,"lane":"d"},{"t":193.083,"lane":"w"},{"t":193.639,"lane":"a"},{"t":193.917,"lane":"d"},{"t":194.194,"lane":"d"},{"t":194.472,"lane":"w"},{"t":195.306,"lane":"s"},{"t":195.861,"lane":"d"},{"t":196.417,"lane":"w"},{"t":196.972,"lane":"w"},{"t":197.528,"lane":"d"},{"t":198.083,"lane":"s"},{"t":198.639,"lane":"a"},{"t":199.194,"lane":"d"},{"t":199.75,"lane":"a"},{"t":200.417,"lane":"d"},{"t":200.972,"lane":"w"},{"t":202.083,"lane":"d"},{"t":203.194,"lane":"a"},{"t":203.917,"lane":"a"},{"t":204.472,"lane":"w"},{"t":205.028,"lane":"d"},{"t":205.583,"lane":"w"},{"t":206.139,"lane":"w"},{"t":206.694,"lane":"a"},{"t":207.25,"lane":"a"},{"t":207.806,"lane":"d"},{"t":208.361,"lane":"s"},{"t":208.917,"lane":"w"},{"t":209.472,"lane":"a"},{"t":210.028,"lane":"s"},{"t":210.583,"lane":"d"},{"t":211.139,"lane":"w"},{"t":211.694,"lane":"a"},{"t":211.972,"lane":"d"},{"t":212.25,"lane":"a"},{"t":212.528,"lane":"a"}]},"shining_stage":{"bpm":129,"duration":30.01,"noteCount":64,"notes":[{"t":2.326,"lane":"s"},{"t":3.023,"lane":"a"},{"t":3.488,"lane":"w"},{"t":3.721,"lane":"a"},{"t":3.953,"lane":"d"},{"t":4.419,"lane":"d"},{"t":5.116,"lane":"a"},{"t":5.581,"lane":"w"},{"t":5.814,"lane":"d"},{"t":6.279,"lane":"a"},{"t":6.744,"lane":"w"},{"t":7.209,"lane":"d"},{"t":7.442,"lane":"s"},{"t":8.14,"lane":"w"},{"t":9.07,"lane":"d"},{"t":9.302,"lane":"d"},{"t":9.767,"lane":"a"},{"t":10,"lane":"w"},{"t":10.233,"lane":"a"},{"t":10.698,"lane":"a"},{"t":11.163,"lane":"d"},{"t":11.628,"lane":"d"},{"t":12.093,"lane":"s"},{"t":12.326,"lane":"d"},{"t":12.558,"lane":"d"},{"t":13.023,"lane":"a"},{"t":13.488,"lane":"w"},{"t":13.953,"lane":"s"},{"t":14.419,"lane":"s"},{"t":14.884,"lane":"w"},{"t":15.349,"lane":"w"},{"t":15.814,"lane":"s"},{"t":16.062,"lane":"s"},{"t":16.977,"lane":"a"},{"t":17.442,"lane":"w"},{"t":17.907,"lane":"d"},{"t":18.372,"lane":"w"},{"t":18.837,"lane":"w"},{"t":19.302,"lane":"d"},{"t":19.767,"lane":"s"},{"t":20,"lane":"a"},{"t":20.233,"lane":"a"},{"t":20.698,"lane":"w"},{"t":20.93,"lane":"a"},{"t":21.163,"lane":"d"},{"t":21.628,"lane":"s"},{"t":22.093,"lane":"a"},{"t":22.558,"lane":"a"},{"t":23.023,"lane":"w"},{"t":23.488,"lane":"d"},{"t":23.721,"lane":"w"},{"t":24.651,"lane":"w"},{"t":25.116,"lane":"d"},{"t":25.581,"lane":"s"},{"t":26.047,"lane":"s"},{"t":26.512,"lane":"d"},{"t":26.977,"lane":"a"},{"t":27.442,"lane":"s"},{"t":27.907,"lane":"w"},{"t":28.372,"lane":"w"},{"t":28.605,"lane":"a"},{"t":28.837,"lane":"w"},{"t":29.302,"lane":"a"},{"t":29.767,"lane":"w"}]},"summer_breeze":{"bpm":172,"duration":30.01,"noteCount":88,"notes":[{"t":0.235,"lane":"w"},{"t":0.584,"lane":"s"},{"t":1.108,"lane":"s"},{"t":1.456,"lane":"w"},{"t":1.875,"lane":"a"},{"t":2.573,"lane":"d"},{"t":3.026,"lane":"a"},{"t":3.212,"lane":"a"},{"t":3.852,"lane":"d"},{"t":4.142,"lane":"d"},{"t":4.782,"lane":"w"},{"t":5.596,"lane":"d"},{"t":5.817,"lane":"w"},{"t":6.41,"lane":"s"},{"t":6.759,"lane":"a"},{"t":7.387,"lane":"d"},{"t":7.561,"lane":"a"},{"t":8.084,"lane":"d"},{"t":8.433,"lane":"s"},{"t":8.956,"lane":"a"},{"t":9.48,"lane":"s"},{"t":9.654,"lane":"s"},{"t":10.177,"lane":"a"},{"t":10.352,"lane":"s"},{"t":10.526,"lane":"s"},{"t":10.701,"lane":"d"},{"t":11.224,"lane":"a"},{"t":11.573,"lane":"a"},{"t":12.096,"lane":"w"},{"t":12.445,"lane":"w"},{"t":12.794,"lane":"a"},{"t":12.968,"lane":"s"},{"t":13.142,"lane":"a"},{"t":13.491,"lane":"s"},{"t":14.015,"lane":"w"},{"t":14.363,"lane":"s"},{"t":14.887,"lane":"w"},{"t":15.235,"lane":"w"},{"t":15.584,"lane":"a"},{"t":15.759,"lane":"d"},{"t":16.108,"lane":"d"},{"t":16.282,"lane":"a"},{"t":16.805,"lane":"w"},{"t":17.154,"lane":"w"},{"t":17.677,"lane":"d"},{"t":17.852,"lane":"s"},{"t":18.026,"lane":"d"},{"t":18.375,"lane":"w"},{"t":18.724,"lane":"w"},{"t":19.073,"lane":"s"},{"t":19.422,"lane":"a"},{"t":19.945,"lane":"a"},{"t":20.119,"lane":"d"},{"t":20.294,"lane":"a"},{"t":20.468,"lane":"d"},{"t":20.817,"lane":"a"},{"t":20.991,"lane":"d"},{"t":21.166,"lane":"s"},{"t":21.34,"lane":"s"},{"t":21.689,"lane":"d"},{"t":22.038,"lane":"w"},{"t":22.387,"lane":"d"},{"t":22.735,"lane":"d"},{"t":23.259,"lane":"w"},{"t":23.608,"lane":"s"},{"t":23.956,"lane":"a"},{"t":24.131,"lane":"w"},{"t":24.654,"lane":"d"},{"t":24.828,"lane":"d"},{"t":25.177,"lane":"s"},{"t":25.526,"lane":"s"},{"t":25.701,"lane":"a"},{"t":26.049,"lane":"w"},{"t":26.224,"lane":"s"},{"t":26.398,"lane":"w"},{"t":26.747,"lane":"w"},{"t":26.922,"lane":"a"},{"t":27.27,"lane":"w"},{"t":27.445,"lane":"a"},{"t":27.619,"lane":"d"},{"t":27.968,"lane":"a"},{"t":28.491,"lane":"d"},{"t":28.666,"lane":"d"},{"t":29.015,"lane":"a"},{"t":29.189,"lane":"a"},{"t":29.363,"lane":"w"},{"t":29.538,"lane":"d"},{"t":29.887,"lane":"s"}]},"summer_light":{"bpm":108,"duration":19.81,"noteCount":32,"notes":[{"t":0.285,"lane":"a"},{"t":0.84,"lane":"a"},{"t":1.118,"lane":"d"},{"t":1.951,"lane":"s"},{"t":2.507,"lane":"a"},{"t":2.785,"lane":"d"},{"t":3.062,"lane":"d"},{"t":3.618,"lane":"s"},{"t":4.451,"lane":"d"},{"t":5.007,"lane":"s"},{"t":5.285,"lane":"s"},{"t":5.562,"lane":"d"},{"t":6.118,"lane":"a"},{"t":6.674,"lane":"d"},{"t":6.951,"lane":"w"},{"t":7.507,"lane":"w"},{"t":7.785,"lane":"d"},{"t":8.062,"lane":"d"},{"t":8.618,"lane":"w"},{"t":9.174,"lane":"d"},{"t":9.451,"lane":"w"},{"t":10.007,"lane":"a"},{"t":10.563,"lane":"w"},{"t":11.118,"lane":"s"},{"t":11.951,"lane":"d"},{"t":12.229,"lane":"s"},{"t":12.507,"lane":"a"},{"t":13.063,"lane":"a"},{"t":13.618,"lane":"s"},{"t":14.451,"lane":"a"},{"t":15.007,"lane":"s"},{"t":15.563,"lane":"a"}]}};/*__END_BEATMAPS__*/;
 
   // ------------------------------------------------------------- song list
   var SONGS = [
@@ -124,6 +124,17 @@
   var WIN_PERFECT = 0.075;     // 기존 0.055
   var WIN_GREAT = 0.13;        // 기존 0.095
   var WIN_GOOD = 0.22;         // 기존 0.16
+
+  // 22-15차: "첫 스테이지치고 난이도가 높다"는 반복된 피드백 — 22-11~22-14차로
+  // 5곡 전체 난이도를 낮추고 blue_horizon 노트 수도 줄였는데도 여전히
+  // 어렵다는 요청이라, 이번엔 다른 4곡은 그대로 두고 STAGE 1(blue_horizon)
+  // 에만 이동시간/판정 윈도우를 한 번 더 넉넉하게 얹어주는 전용 배율을 추가.
+  // 캐릭터 능력 배율(windowBoost/slowNotes)과는 곱해져서 같이 적용된다.
+  var STAGE1_KEY = 'blue_horizon';
+  var STAGE1_EASE_MULT = 1.35;
+  function stage1EaseMult() {
+    return currentSong && currentSong.song && currentSong.song.key === STAGE1_KEY ? STAGE1_EASE_MULT : 1;
+  }
 
   // ------------------------------------------------------ 21차: 스테이지 진행도
   // "1스테이지를 B랭크 이상으로 클리어해야 2스테이지가 열린다"는 순차 잠금
@@ -251,64 +262,64 @@
       // 상태가 되어 아래 정보 카드가 갱신되지만, 실제 확인창은 정보 카드의
       // "이 멤버로 시작" 버튼을 눌러야만 뜬다(가운데 캐릭터를 한 번 더
       // 클릭하는 방식은 이번엔 채택하지 않음 — 버튼이 더 명확한 CTA라서).
+      // 22-16차: 사용자가 스크린샷으로 준 "센터 스냅 캐러셀"(22-7차와 같은
+      // 계열) 구도로 재교체 — 22-8차의 좌측 상세 패널/우측 세로 리스트를
+      // 걷어내고, 가운데 큰 캐릭터 + 좌우로 살짝 보이는 옆 캐릭터 + 화살표
+      // 버튼으로 돌아왔다. 옆 캐릭터를 직접 클릭하거나 화살표를 누르면 그
+      // 캐릭터가 가운데로 전환된다. 정보는 캐릭터 그림 "아래"에 이름/역할/
+      // 능력만 간단히 표시(나이/MBTI 등 상세 프로필은 이번엔 다시 뺌 — 참고
+      // 스크린샷에 없었음). 그림 바로 밑에 붙어있던 작은 이름 배지는 아래
+      // 정보 카드의 이름과 중복이라 요청대로 제거.
+      // 22-19차: 사용자가 22-7차 당시의 원본 game.js 백업 파일을 다시 올려서
+      // "캐릭터 선택창을 이걸로 바꿔달라"고 요청 — 22-8차 이후 여러 차례
+      // 재구성을 거치며 사라졌던 22-7차 "센터 스냅 캐러셀"의 실제 원본
+      // 코드(작은 카드 + CURRENT 배지 + 저 멀리 흐릿하게 보이는 4번째 캐릭터)를
+      // 그 백업에서 그대로 되살렸다. 아래 CSS/HTML/JS는 22-16~22-18차의
+      // 재구현판이 아니라 22-7차 원본 그대로다.
       + '.sbg-charselect{padding:0;}'
       + '.sbg-charselect-label{font-size:clamp(14px,2.6vw,20px);letter-spacing:2px;color:#fff;text-shadow:0 0 8px #fff,0 0 20px #4FD6E0;}'
       + '.sbg-charselect-topline{position:absolute;left:0;right:0;top:5%;z-index:2;text-align:center;}'
-      + '.sbg-charselect-body{position:absolute;left:0;right:0;top:10%;bottom:3%;z-index:2;display:flex;flex-direction:row;align-items:stretch;justify-content:center;gap:clamp(14px,2.2vw,36px);padding:0 2.2vw;}'
-      // 22-8차: 가운데에 큰 캐릭터, 왼쪽에 상세 프로필(이름/직업/능력/나이/
-      // MBTI/좋아하는 것/싫어하는 것/국적/데뷔 사연), 오른쪽에 세로 스크롤
-      // 선택 리스트(작은 초상화 + 이름) — 사용자가 준 두 참고 이미지(모바일
-      // RPG 캐릭터 선택 화면 + 22-3/22-4차의 상세 정보 카드)를 합친 3분할
-      // 구도로 22-7차 캐러셀을 대체했다. 오른쪽 리스트를 클릭하면 즉시
-      // 가운데/왼쪽이 그 캐릭터로 바뀌고(AskUserQuestion에서 확정), "이
-      // 멤버로 시작" 버튼을 눌러야만 확인창이 뜨는 흐름은 22-6/22-7차와
-      // 동일하게 유지했다.
-      + '.sbg-charselect-left{width:min(460px,34vw);flex:0 0 auto;display:flex;flex-direction:column;justify-content:center;overflow-y:auto;}'
-      + '.sbg-charselect-center{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;}'
-      + '.sbg-charselect-right{width:min(360px,28vw);flex:0 0 auto;display:flex;flex-direction:column;gap:12px;overflow-y:auto;padding:2px 4px 2px 2px;}'
-      // 왼쪽 상세 프로필 카드. (22-8-2/22-8-3차: 사용자 요청으로 3열 전부
-      // 두 차례 확대 — 왼쪽 패널/가운데 캐릭터/오른쪽 리스트의 크기와
-      // 글자를 계속 키웠다. 사용자가 실제 자기 브라우저(넓은 화면)에서
-      // 찍은 스크린샷을 보내 "전체적으로 이정도로 크게"라고 요청 — px
-      // 상한(min() 안의 고정값)이 넓은 화면에서도 성장을 막고 있던 게
-      // 원인이라, vw 비율은 크게 안 건드리고 px 상한 자체를 크게 올렸다.
-      + '.sbg-detail-panel{background:linear-gradient(160deg,rgba(20,24,50,.6),rgba(6,8,20,.55));border:1px solid rgba(140,150,255,.22);border-radius:20px;padding:32px 32px 34px;backdrop-filter:blur(4px);}'
-      + '.sbg-detail-name{font-size:clamp(28px,3.4vw,36px);font-weight:800;color:#fff;margin-bottom:4px;}'
-      + '.sbg-detail-role{font-size:16px;color:#8a90c4;margin-bottom:19px;}'
-      + '.sbg-detail-ability{padding:17px 0;border-top:1px solid rgba(140,150,255,.2);border-bottom:1px solid rgba(140,150,255,.2);margin-bottom:19px;}'
-      + '.sbg-detail-ability-name{display:block;font-family:"Pixelify Sans";font-weight:700;font-size:clamp(19px,2.3vw,24px);letter-spacing:.3px;margin-bottom:7px;}'
-      + '.sbg-detail-ability-desc{font-size:16px;color:#c7cbef;line-height:1.5;}'
-      + '.sbg-detail-ability-bar-track{height:8px;border-radius:999px;background:rgba(255,255,255,.08);margin-top:11px;overflow:hidden;}'
-      + '.sbg-detail-ability-bar-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--sbg-c-from,#4FD6E0),var(--sbg-c-to,#F5F5FF));transition:width .3s ease;}'
-      + '.sbg-detail-grid{display:grid;grid-template-columns:auto 1fr;row-gap:11px;column-gap:14px;font-size:16px;margin-bottom:19px;}'
-      + '.sbg-detail-grid-label{color:#8a90c4;white-space:nowrap;}'
-      + '.sbg-detail-grid-value{color:#eef1ff;}'
-      + '.sbg-detail-debut-label{font-size:13px;color:#8a90c4;letter-spacing:.5px;margin-bottom:7px;}'
-      + '.sbg-detail-debut-text{font-size:16px;color:#c7cbef;line-height:1.6;}'
-      // 가운데 큰 캐릭터.
-      + '.sbg-center-stage{position:relative;width:min(560px,42vw);height:clamp(520px,74vh,860px);display:flex;align-items:flex-end;justify-content:center;flex-shrink:0;}'
-      + '.sbg-center-portrait-glow{position:absolute;left:50%;bottom:4%;width:74%;height:32%;transform:translateX(-50%);border-radius:50%;filter:blur(44px);opacity:.55;background:radial-gradient(circle,var(--sbg-c-to,#4FD6E0),transparent 70%);z-index:0;pointer-events:none;}'
-      + '.sbg-center-portrait-img{position:relative;z-index:1;max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 30px 28px rgba(0,0,0,.55)) drop-shadow(0 0 34px var(--sbg-c-to,#4FD6E0));transition:opacity .2s ease;}'
-      + '.sbg-center-portrait-fallback{display:none;position:relative;z-index:1;width:58%;height:58%;object-fit:contain;filter:drop-shadow(0 14px 18px rgba(0,0,0,.5));}'
-      + '@keyframes sbgCenterPop{0%{transform:scale(.92);opacity:.5;}100%{transform:scale(1);opacity:1;}}'
-      + '.sbg-center-stage.sbg-pop .sbg-center-portrait-img,.sbg-center-stage.sbg-pop .sbg-center-portrait-fallback{animation:sbgCenterPop .28s ease;}'
-      + '.sbg-center-name-badge{font-size:clamp(21px,2.6vw,28px);font-weight:700;letter-spacing:.3px;padding:10px 30px;border-radius:999px;color:#0c0f22;background:linear-gradient(160deg,var(--sbg-c-from,#4FD6E0),var(--sbg-c-to,#F5F5FF));box-shadow:0 10px 20px -8px rgba(0,0,0,.5);}'
-      + '.sbg-center-start-btn{display:inline-block;padding:16px 48px;border-radius:999px;font-size:clamp(18px,2.2vw,22px);font-weight:700;'
+      + '.sbg-charselect-body{position:absolute;left:0;right:0;top:12%;bottom:4%;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(14px,2.4vh,26px);}'
+      // 캐러셀 — 가운데 캐릭터는 크게, 옆은 작고 흐리게. 실제 위치·스케일은
+      // JS(updateCarouselPositions)가 인라인 transform으로 계산해서 넣는다.
+      + '.sbg-carousel{position:relative;width:min(1040px,96vw);height:clamp(420px,66vh,720px);flex-shrink:0;}'
+      + '.sbg-carousel-track{position:relative;width:100%;height:100%;cursor:grab;touch-action:none;}'
+      + '.sbg-carousel-track.is-dragging{cursor:grabbing;}'
+      + '.sbg-carousel-item{position:absolute;left:50%;top:50%;display:flex;flex-direction:column;align-items:center;user-select:none;'
+        + 'transition:transform .38s cubic-bezier(.22,.85,.32,1.05),opacity .3s ease;will-change:transform,opacity;}'
+      + '.sbg-carousel-item.is-dragging-live{transition:none;}'
+      + '.sbg-carousel-item.is-center{cursor:default;}'
+      + '.sbg-carousel-item:not(.is-center){cursor:pointer;}'
+      + '.sbg-carousel-item-imgwrap{position:relative;width:clamp(210px,22vw,360px);height:clamp(390px,54vh,620px);'
+        + 'display:flex;align-items:flex-end;justify-content:center;pointer-events:none;}'
+      + '.sbg-carousel-item-img{max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 20px 20px rgba(0,0,0,.5));pointer-events:none;}'
+      + '.sbg-carousel-item-fallback{display:none;width:56%;height:56%;object-fit:contain;filter:drop-shadow(0 14px 18px rgba(0,0,0,.5));pointer-events:none;}'
+      + '.sbg-carousel-item.is-center .sbg-carousel-item-img{filter:drop-shadow(0 26px 24px rgba(0,0,0,.55)) drop-shadow(0 0 28px var(--sbg-c-to,#4FD6E0));}'
+      // 22-19-1차: 그림 바로 밑에 뜨는 이름 배지는 아래 정보 카드(이름/역할/
+      // 능력)와 중복이라 사용자 요청으로 제거(22-16차 때도 같은 이유로
+      // 한 번 뺐던 것 — 이번 원복으로 22-7차 원본과 함께 다시 돌아왔던
+      // 것을 재차 제거).
+      + '.sbg-carousel-item-badge{display:none;position:absolute;top:-4px;right:6px;padding:3px 10px 4px;font-size:10px;font-weight:700;'
+        + 'letter-spacing:.3px;color:#0c0f22;background:#FFE9A8;border-radius:999px;box-shadow:0 6px 10px -4px rgba(0,0,0,.5);z-index:1;pointer-events:none;}'
+      + '.sbg-carousel-item.is-active .sbg-carousel-item-badge{display:block;}'
+      + '.sbg-carousel-arrow{position:absolute;top:44%;transform:translateY(-50%);width:clamp(38px,4.2vw,52px);height:clamp(38px,4.2vw,52px);'
+        + 'border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(10,12,28,.55);border:1px solid rgba(140,150,255,.3);'
+        + 'color:#fff;font-size:clamp(20px,2.2vw,26px);cursor:pointer;z-index:20;user-select:none;transition:background .15s ease,border-color .15s ease,transform .15s ease;}'
+      + '.sbg-carousel-arrow:hover{background:rgba(20,24,50,.85);border-color:#fff;}'
+      + '.sbg-carousel-arrow:active{transform:translateY(-50%) scale(.9);}'
+      + '.sbg-carousel-arrow-left{left:0;}'
+      + '.sbg-carousel-arrow-right{right:0;}'
+      // 아래 정보 카드 — 가운데(선택된) 캐릭터의 이름/역할/능력 + 시작 버튼.
+      + '.sbg-carousel-info{width:min(560px,90vw);text-align:center;flex-shrink:0;}'
+      + '.sbg-carousel-info-name{font-size:clamp(22px,3vw,30px);font-weight:800;color:#fff;margin-bottom:4px;}'
+      + '.sbg-carousel-info-role{font-size:clamp(12px,1.5vw,15px);color:#8a90c4;margin-bottom:12px;}'
+      + '.sbg-carousel-info-ability{padding-top:12px;border-top:1px solid rgba(140,150,255,.2);margin-bottom:18px;}'
+      + '.sbg-carousel-info-ability-name{display:block;font-family:"Pixelify Sans";font-weight:700;font-size:clamp(14px,1.8vw,18px);letter-spacing:.3px;margin-bottom:6px;}'
+      + '.sbg-carousel-info-ability-desc{font-size:clamp(12.5px,1.6vw,15px);color:#c7cbef;line-height:1.5;}'
+      + '.sbg-carousel-start-btn{display:inline-block;padding:11px 34px;border-radius:999px;font-size:clamp(13px,1.6vw,15px);font-weight:700;'
         + 'letter-spacing:.3px;color:#0c0f22;background:linear-gradient(160deg,#FFE9A8,#FFB199);cursor:pointer;box-shadow:0 14px 26px -12px rgba(0,0,0,.5);'
         + 'transition:transform .15s ease,box-shadow .15s ease;}'
-      + '.sbg-center-start-btn:hover{transform:translateY(-2px);box-shadow:0 18px 30px -12px rgba(0,0,0,.6);}'
-      // 오른쪽 선택 리스트 — 작은 초상화 + 이름/역할, 클릭하면 즉시 가운데로.
-      + '.sbg-charlist-title{font-size:14px;color:#8a90c4;letter-spacing:1.5px;margin-bottom:3px;padding:0 4px;flex-shrink:0;}'
-      + '.sbg-charlist-item{display:flex;align-items:center;gap:16px;padding:14px 16px;border-radius:16px;border:1px solid rgba(140,150,255,.16);background:rgba(255,255,255,.02);cursor:pointer;flex-shrink:0;transition:border-color .15s ease,background .15s ease,transform .12s ease;}'
-      + '.sbg-charlist-item:hover{border-color:rgba(140,150,255,.4);background:rgba(255,255,255,.05);transform:translateX(-2px);}'
-      + '.sbg-charlist-item.is-selected{border-color:var(--sbg-c-to,#4FD6E0);background:linear-gradient(160deg,rgba(255,255,255,.09),rgba(255,255,255,.02));box-shadow:0 0 0 1px var(--sbg-c-to,#4FD6E0) inset;}'
-      + '.sbg-charlist-thumb{position:relative;width:76px;height:76px;border-radius:15px;overflow:hidden;flex-shrink:0;background:radial-gradient(circle at 50% 30%,rgba(255,255,255,.08),rgba(0,0,0,.3));display:flex;align-items:flex-end;justify-content:center;}'
-      + '.sbg-charlist-thumb img{width:100%;height:100%;object-fit:contain;object-position:bottom center;}'
-      + '.sbg-charlist-thumb .sbg-charlist-thumb-fallback{display:none;width:60%;height:60%;object-fit:contain;}'
-      + '.sbg-charlist-text{min-width:0;flex:1 1 auto;}'
-      + '.sbg-charlist-name{font-size:18px;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}'
-      + '.sbg-charlist-role{font-size:13px;color:#8a90c4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}'
-      + '.sbg-charlist-current-badge{flex-shrink:0;font-size:11.5px;font-weight:700;letter-spacing:.2px;color:#0c0f22;background:#FFE9A8;padding:5px 9px;border-radius:999px;}'
+      + '.sbg-carousel-start-btn:hover{transform:translateY(-2px);box-shadow:0 18px 30px -12px rgba(0,0,0,.6);}'
       + '.sbg-char-back{position:absolute;left:4%;top:6%;z-index:2;font-size:12px;color:#8a90c4;cursor:pointer;letter-spacing:.3px;}'
       + '.sbg-char-back:hover{color:#eef1ff;}'
       // 선택 확인창 — 메이플의 "이 직업군을 선택하시겠습니까? 선택/취소"를
@@ -470,17 +481,12 @@
           '<div class="sbg-sub" id="sbg-charselect-song">—</div>' +
         '</div>' +
         '<div class="sbg-charselect-body">' +
-          '<div class="sbg-charselect-left" id="sbg-charselect-left"></div>' +
-          '<div class="sbg-charselect-center">' +
-            '<div class="sbg-center-stage" id="sbg-center-stage">' +
-              '<div class="sbg-center-portrait-glow" id="sbg-center-glow"></div>' +
-              '<img class="sbg-center-portrait-img" id="sbg-center-img" alt="">' +
-              '<img class="sbg-center-portrait-fallback" id="sbg-center-fallback" alt="">' +
-            '</div>' +
-            '<div class="sbg-center-name-badge" id="sbg-center-name-badge">—</div>' +
-            '<div class="sbg-center-start-btn" id="sbg-center-start-btn">이 멤버로 시작</div>' +
+          '<div class="sbg-carousel" id="sbg-carousel">' +
+            '<div class="sbg-carousel-arrow sbg-carousel-arrow-left" id="sbg-carousel-prev">‹</div>' +
+            '<div class="sbg-carousel-track" id="sbg-carousel-track"></div>' +
+            '<div class="sbg-carousel-arrow sbg-carousel-arrow-right" id="sbg-carousel-next">›</div>' +
           '</div>' +
-          '<div class="sbg-charselect-right" id="sbg-charselect-right"></div>' +
+          '<div class="sbg-carousel-info" id="sbg-carousel-info"></div>' +
         '</div>' +
         '<div class="sbg-char-back" id="sbg-char-back">← 곡 선택으로</div>' +
         '<div class="sbg-charselect-confirm" id="sbg-charselect-confirm">' +
@@ -600,12 +606,16 @@
     root.querySelector('#sbg-retry-btn').addEventListener('click', function () { stopPlayback(); if (currentSong) startSong(currentSong.song); });
     root.querySelector('#sbg-toselect-btn').addEventListener('click', function () { stopPlayback(); showScreen('select'); });
     root.querySelector('#sbg-char-back').addEventListener('click', function () { pendingSong = null; showScreen('select'); });
-    // 22-8차: 가운데 "이 멤버로 시작" 버튼 — 화면 안에 하나뿐인 정적 버튼이라
-    // (오른쪽 리스트 항목들과 달리) 화면을 열 때마다 새로 그리지 않고 여기서
-    // 한 번만 리스너를 붙인다. 지금 선택된 캐릭터(selectedCharKey)에 대해
-    // 확인창을 연다.
-    root.querySelector('#sbg-center-start-btn').addEventListener('click', function () {
-      openCharConfirm(selectedCharKey);
+    // 22-7차: 캐러셀 좌우 화살표 — 화면 안에 딱 한 쌍만 있는 정적 버튼이라
+    // (트랙 안의 캐릭터 카드들과 달리) 화면을 열 때마다 새로 그리지 않고
+    // 여기서 한 번만 리스너를 붙인다.
+    root.querySelector('#sbg-carousel-prev').addEventListener('click', function () {
+      carouselIndex = (carouselIndex - 1 + CHARACTERS.length) % CHARACTERS.length;
+      updateCarouselPositions();
+    });
+    root.querySelector('#sbg-carousel-next').addEventListener('click', function () {
+      carouselIndex = (carouselIndex + 1) % CHARACTERS.length;
+      updateCarouselPositions();
     });
     root.querySelector('#sbg-confirm-cancel').addEventListener('click', closeCharConfirm);
     root.querySelector('#sbg-confirm-start').addEventListener('click', function () {
@@ -658,121 +668,168 @@
   }
 
   // 22차: 곡을 고른 직후, 로딩 전에 캐릭터(멤버) 선택 화면을 보여준다.
-  // 22-5차 카드 그리드 → 22-6차 클릭형 라인업 → 22-7차 센터 스냅 캐러셀을
-  // 거쳐, 22-8차에서 사용자가 준 두 참고 이미지(모바일 RPG 캐릭터 선택
-  // 화면 + 22-3/22-4차의 상세 정보 카드)를 합쳐 "가운데 큰 캐릭터 + 왼쪽
-  // 상세 프로필 + 오른쪽 세로 선택 리스트" 3분할 구도로 다시 갈아엎었다.
-  // 확인창(이 멤버로 시작하시겠습니까?) 단계는 계속 유지하되, 22-5차에서
-  // 뺐던 상세 프로필(나이/MBTI/좋아하는 것/싫어하는 것/국적/데뷔 사연)을
-  // 왼쪽 패널로 되살렸다 — 데이터는 22-2/22-3차부터 CHARACTERS 배열에
-  // 계속 있던 것을 그대로 재사용, 새로 지어내지 않았다.
+  // 22-19차: 22-8차 이후 여러 차례(3분할 → 라인업 → 재구현 캐러셀) 바뀌어온
+  // 화면을, 사용자가 다시 올려준 22-7차 당시 원본 백업 파일 그대로 되돌렸다.
+  // 가운데 큰 캐릭터 + 좌우로 작고 흐리게 보이는 캐릭터들(맨 끝은 아주
+  // 희미하게) + CURRENT 배지(지금 실제로 활성화된 캐릭터 표시) + 화살표
+  // 버튼 구도이며, 인덱스는 원형으로 순환한다(맨 끝에서도 화살표가 막히지
+  // 않고 반대쪽 끝으로 넘어간다).
   //
-  // selectedCharKey = 지금 가운데/왼쪽에 표시 중인(=선택된) 캐릭터의 key.
-  // previewCharacterKey는 확인창이 지금 어떤 캐릭터에 대해 열려있는지만
-  // 기억한다(openCharConfirm에서 설정, 이전 차수와 동일).
-  var selectedCharKey = null;
+  // carouselIndex = 지금 캐러셀 가운데(=선택됨, 정보 카드에 표시 중)에 있는
+  // 캐릭터의 CHARACTERS 배열 인덱스. previewCharacterKey는 확인창이 지금
+  // 어떤 캐릭터에 대해 열려있는지만 기억한다(openCharConfirm에서 설정).
+  var carouselIndex = 0;
   var previewCharacterKey = null;
+  var carouselDragMoved = false; // 드래그 직후에 살짝 남는 click을 선택으로 오인하지 않기 위한 플래그
+  var carouselDragBound = false; // 트랙 드래그 리스너는 화면당 한 번만 붙인다(트랙 DOM 자체는 재사용)
 
   function openCharSelect(song) {
     pendingSong = song;
-    selectedCharKey = activeCharacterKey;
+    carouselIndex = Math.max(0, CHARACTERS.findIndex(function (c) { return c.key === activeCharacterKey; }));
     var charSongEl = root.querySelector('#sbg-charselect-song');
     if (charSongEl) charSongEl.textContent = song.title + ' — 함께할 멤버를 골라주세요';
-    renderCharRight();
-    selectCharacter(selectedCharKey, false);
+    renderCarousel();
     closeCharConfirm();
     showScreen('character');
   }
 
-  // 오른쪽 세로 리스트 — 5명뿐이라 캐러셀처럼 DOM을 유지할 필요 없이 화면을
-  //열 때 통째로 한 번 그린다. 항목을 클릭하면 즉시 가운데/왼쪽이 그
-  // 캐릭터로 바뀐다(AskUserQuestion에서 "클릭 시 가운데로 즉시 전환"으로
-  // 확정 — 스와이프/드래그는 이번 구도에서는 채택하지 않음).
-  function renderCharRight() {
-    var listEl = root.querySelector('#sbg-charselect-right');
-    if (!listEl) return;
-    listEl.innerHTML = '<div class="sbg-charlist-title">MEMBERS</div>' +
-      CHARACTERS.map(function (c) {
-        return '<div class="sbg-charlist-item" data-char="' + c.key + '" style="--sbg-c-from:' + c.from + ';--sbg-c-to:' + c.to + '">' +
-          '<div class="sbg-charlist-thumb">' +
-            '<img class="sbg-charlist-thumb-img" alt="' + c.name + '" src="' + c.portrait + '">' +
-            '<img class="sbg-charlist-thumb-fallback" alt="' + c.name + '" src="' + c.icon + '">' +
-          '</div>' +
-          '<div class="sbg-charlist-text">' +
-            '<div class="sbg-charlist-name">' + c.name + '</div>' +
-            '<div class="sbg-charlist-role">' + c.role + '</div>' +
-          '</div>' +
-          (c.key === activeCharacterKey ? '<div class="sbg-charlist-current-badge">CURRENT</div>' : '') +
-        '</div>';
-      }).join('');
-    Array.prototype.forEach.call(listEl.querySelectorAll('.sbg-charlist-item'), function (item) {
-      var img = item.querySelector('.sbg-charlist-thumb-img');
-      var fallback = item.querySelector('.sbg-charlist-thumb-fallback');
+  // 캐러셀 트랙 — 5명 전신 사진(portraits/, 투명 배경)을 한 번만 그려두고,
+  // 이후엔 updateCarouselPositions()가 위치/크기/투명도만 갱신한다(DOM을
+  // 매번 다시 그리면 transform 트랜지션이 끊겨서 "이동" 느낌이 안 산다).
+  function renderCarousel() {
+    var track = root.querySelector('#sbg-carousel-track');
+    track.innerHTML = CHARACTERS.map(function (c, i) {
+      return '<div class="sbg-carousel-item" data-index="' + i + '" data-char="' + c.key + '" style="--sbg-c-from:' + c.from + ';--sbg-c-to:' + c.to + '">' +
+        '<div class="sbg-carousel-item-badge">CURRENT</div>' +
+        '<div class="sbg-carousel-item-imgwrap">' +
+          '<img class="sbg-carousel-item-img" alt="' + c.name + '" src="' + c.portrait + '">' +
+          '<img class="sbg-carousel-item-fallback" alt="' + c.name + '" src="' + c.icon + '">' +
+        '</div>' +
+      '</div>';
+    }).join('');
+    Array.prototype.forEach.call(track.querySelectorAll('.sbg-carousel-item'), function (item) {
+      var img = item.querySelector('.sbg-carousel-item-img');
+      var fallback = item.querySelector('.sbg-carousel-item-fallback');
       img.addEventListener('error', function () { img.style.display = 'none'; fallback.style.display = 'block'; });
       img.addEventListener('load', function () { img.style.display = ''; fallback.style.display = 'none'; });
-      item.addEventListener('click', function () { selectCharacter(item.getAttribute('data-char'), true); });
+      // 옆에 살짝 보이는 캐릭터를 "클릭"해서 가운데로 데려오는 동작은 여기서
+      // 개별 click 리스너로 처리하지 않는다 — 아래 attachCarouselDrag의
+      // 트랙 레벨 pointerup에서 setPointerCapture 중일 때의 클릭 좌표를
+      // 직접 판별해서 처리한다(이유는 그 함수 주석 참고).
     });
-    updateCharlistSelection();
+    if (!carouselDragBound) { attachCarouselDrag(track); carouselDragBound = true; }
+    updateCarouselPositions();
   }
 
-  function updateCharlistSelection() {
-    var listEl = root.querySelector('#sbg-charselect-right');
-    if (!listEl) return;
-    Array.prototype.forEach.call(listEl.querySelectorAll('.sbg-charlist-item'), function (item) {
-      item.classList.toggle('is-selected', item.getAttribute('data-char') === selectedCharKey);
-    });
-  }
+  // 트랙을 좌우로 스와이프/드래그하면 가운데 캐릭터가 바뀐다(임계값 이상
+  // 움직이면 옆 인덱스로 스냅). 옆에 살짝 보이는 캐릭터를 "클릭"하는 것도
+  // 이동량이 거의 없는 드래그로 취급해 여기서 함께 처리한다 — 트랙에
+  // setPointerCapture를 걸어두면(드래그 중 커서가 트랙 밖으로 나가도 계속
+  // 추적하기 위해 필요) 브라우저가 그 사이의 click 이벤트를 캡처한 요소
+  // (트랙)로 재타게팅해버려서, 캐릭터 아이템에 따로 단 click 리스너가
+  // 아예 발화하지 않는 문제가 있었다 — 그래서 클릭/드래그 판정을 전부
+  // pointerup 한 곳에서 좌표 기반(elementFromPoint)으로 처리한다. 마우스와
+  // 터치를 함께 다루는 Pointer Events를 쓴다.
+  function attachCarouselDrag(track) {
+    var dragging = false, startX = 0, startIndex = 0, dx = 0;
+    var THRESHOLD = 46;
 
-  // 가운데 큰 캐릭터 + 왼쪽 상세 프로필을 selectedCharKey 기준으로 갱신한다.
-  // pop=true면 가운데 초상화에 살짝 튀어오르는 등장 애니메이션을 준다(화면을
-  // 처음 열 때는 필요 없어서 openCharSelect에서는 false로 부른다).
-  function selectCharacter(key, pop) {
-    selectedCharKey = key;
-    var c = getCharacter(key);
-
-    var stage = root.querySelector('#sbg-center-stage');
-    var img = root.querySelector('#sbg-center-img');
-    var fallback = root.querySelector('#sbg-center-fallback');
-    var nameBadge = root.querySelector('#sbg-center-name-badge');
-    if (stage) { stage.style.setProperty('--sbg-c-from', c.from); stage.style.setProperty('--sbg-c-to', c.to); }
-    if (img) { img.src = c.portrait; img.alt = c.name; img.style.display = ''; }
-    if (fallback) { fallback.src = c.icon; fallback.alt = c.name; fallback.style.display = 'none'; }
-    if (nameBadge) nameBadge.textContent = c.name;
-    if (pop && stage) {
-      stage.classList.remove('sbg-pop');
-      void stage.offsetWidth; // 애니메이션 재시작을 위한 강제 리플로우
-      stage.classList.add('sbg-pop');
+    function itemsWithIndex() {
+      return Array.prototype.map.call(track.querySelectorAll('.sbg-carousel-item'), function (el) {
+        return { el: el, idx: parseInt(el.getAttribute('data-index'), 10) };
+      });
     }
-
-    renderCharLeft(c);
-    updateCharlistSelection();
+    function onDown(e) {
+      dragging = true;
+      carouselDragMoved = false;
+      dx = 0;
+      startX = e.clientX;
+      startIndex = carouselIndex;
+      track.classList.add('is-dragging');
+      itemsWithIndex().forEach(function (o) { o.el.classList.add('is-dragging-live'); });
+      if (track.setPointerCapture && e.pointerId !== undefined) { try { track.setPointerCapture(e.pointerId); } catch (err) {} }
+    }
+    function onMove(e) {
+      if (!dragging) return;
+      dx = e.clientX - startX;
+      if (Math.abs(dx) > 4) carouselDragMoved = true;
+      var stepPx = Math.min(230, track.clientWidth ? track.clientWidth * 0.27 : 210);
+      itemsWithIndex().forEach(function (o) {
+        var off = o.idx - startIndex;
+        var absOff = Math.min(2, Math.abs(off));
+        var scale = absOff === 0 ? 1 : (absOff === 1 ? 0.62 : 0.42);
+        o.el.style.transform = 'translate(-50%,-50%) translateX(' + (off * stepPx + dx) + 'px) scale(' + scale + ')';
+      });
+    }
+    function onUp(e) {
+      if (!dragging) return;
+      dragging = false;
+      track.classList.remove('is-dragging');
+      itemsWithIndex().forEach(function (o) { o.el.classList.remove('is-dragging-live'); });
+      if (Math.abs(dx) < 6 && e && typeof e.clientX === 'number') {
+        // 이동량이 거의 없으면 드래그가 아니라 "클릭"으로 본다 — 그 좌표에
+        // 있는 캐릭터 아이템을 찾아서 바로 가운데로 데려온다(옆 캐릭터
+        // 클릭 선택). 빈 공간을 클릭했으면 아무 것도 바꾸지 않는다.
+        var elAtPoint = document.elementFromPoint(e.clientX, e.clientY);
+        var itemEl = elAtPoint && elAtPoint.closest ? elAtPoint.closest('.sbg-carousel-item') : null;
+        var clickedIdx = itemEl ? parseInt(itemEl.getAttribute('data-index'), 10) : NaN;
+        carouselIndex = !isNaN(clickedIdx) ? clickedIdx : startIndex;
+      } else if (dx <= -THRESHOLD) {
+        carouselIndex = (startIndex + 1) % CHARACTERS.length;
+      } else if (dx >= THRESHOLD) {
+        carouselIndex = (startIndex - 1 + CHARACTERS.length) % CHARACTERS.length;
+      } else {
+        carouselIndex = startIndex;
+      }
+      updateCarouselPositions();
+      setTimeout(function () { carouselDragMoved = false; }, 0);
+    }
+    track.addEventListener('pointerdown', onDown);
+    track.addEventListener('pointermove', onMove);
+    track.addEventListener('pointerup', onUp);
+    track.addEventListener('pointercancel', onUp);
+    track.addEventListener('pointerleave', function (e) { if (dragging) onUp(e); });
   }
 
-  // 왼쪽 상세 프로필 카드 — 이름/직업/능력(막대바 포함)/나이/MBTI/좋아하는
-  // 것/싫어하는 것/국적/데뷔 사연. 22-5차에서 한 번 뺐던 상세 정보를
-  // 사용자 요청으로 22-8차에서 되살렸다.
-  function renderCharLeft(c) {
-    var leftEl = root.querySelector('#sbg-charselect-left');
-    if (!leftEl) return;
-    leftEl.innerHTML =
-      '<div class="sbg-detail-panel" style="--sbg-c-from:' + c.from + ';--sbg-c-to:' + c.to + '">' +
-        '<div class="sbg-detail-name">' + c.name + '</div>' +
-        '<div class="sbg-detail-role">' + c.role + '</div>' +
-        '<div class="sbg-detail-ability">' +
-          '<span class="sbg-detail-ability-name" style="color:' + c.to + '">' + c.abilityName + '</span>' +
-          '<span class="sbg-detail-ability-desc">' + c.abilityDesc + '</span>' +
-          '<div class="sbg-detail-ability-bar-track"><div class="sbg-detail-ability-bar-fill" style="width:' + c.barPct + '%"></div></div>' +
-        '</div>' +
-        '<div class="sbg-detail-grid">' +
-          '<div class="sbg-detail-grid-label">나이</div><div class="sbg-detail-grid-value">' + c.age + '세</div>' +
-          '<div class="sbg-detail-grid-label">MBTI</div><div class="sbg-detail-grid-value">' + c.mbti + '</div>' +
-          '<div class="sbg-detail-grid-label">좋아하는 것</div><div class="sbg-detail-grid-value">' + c.likes + '</div>' +
-          '<div class="sbg-detail-grid-label">싫어하는 것</div><div class="sbg-detail-grid-value">' + c.dislikes + '</div>' +
-          '<div class="sbg-detail-grid-label">국적</div><div class="sbg-detail-grid-value">' + c.nation + '</div>' +
-        '</div>' +
-        '<div class="sbg-detail-debut-label">데뷔 사연</div>' +
-        '<div class="sbg-detail-debut-text">' + c.debut + '</div>' +
-      '</div>';
+  // 인덱스(carouselIndex) 기준으로 각 캐릭터의 위치·크기·투명도·클릭 가능
+  // 여부를 다시 계산해서 넣는다. 화살표 클릭/옆 캐릭터 클릭/드래그 스냅이
+  // 모두 이 함수 하나로 수렴한다.
+  function updateCarouselPositions() {
+    var track = root.querySelector('#sbg-carousel-track');
+    if (!track) return;
+    var stepPx = Math.min(230, track.clientWidth ? track.clientWidth * 0.27 : 210);
+    Array.prototype.forEach.call(track.querySelectorAll('.sbg-carousel-item'), function (item) {
+      var idx = parseInt(item.getAttribute('data-index'), 10);
+      var off = idx - carouselIndex;
+      var absOff = Math.min(2, Math.abs(off));
+      var visible = Math.abs(off) <= 2;
+      var scale = absOff === 0 ? 1 : (absOff === 1 ? 0.62 : 0.42);
+      var opacity = !visible ? 0 : (absOff === 0 ? 1 : (absOff === 1 ? 0.55 : 0.22));
+      item.style.transform = 'translate(-50%,-50%) translateX(' + (off * stepPx) + 'px) scale(' + scale + ')';
+      item.style.opacity = String(opacity);
+      item.style.zIndex = String(10 - absOff);
+      item.style.pointerEvents = visible ? 'auto' : 'none';
+      item.classList.toggle('is-center', off === 0);
+      item.classList.toggle('is-active', idx === CHARACTERS.findIndex(function (c) { return c.key === activeCharacterKey; }));
+    });
+    renderCarouselInfo(CHARACTERS[carouselIndex].key);
+  }
+
+  // 아래 정보 카드 — 지금 가운데(선택된) 캐릭터의 이름/역할/능력 + "이
+  // 멤버로 시작" 버튼(눌러야 확인창이 뜬다).
+  function renderCarouselInfo(key) {
+    var c = getCharacter(key);
+    var info = root && root.querySelector('#sbg-carousel-info');
+    if (!info) return;
+    info.innerHTML =
+      '<div class="sbg-carousel-info-name">' + c.name + '</div>' +
+      '<div class="sbg-carousel-info-role">' + c.role + '</div>' +
+      '<div class="sbg-carousel-info-ability">' +
+        '<span class="sbg-carousel-info-ability-name" style="color:' + c.to + '">' + c.abilityName + '</span>' +
+        '<span class="sbg-carousel-info-ability-desc">' + c.abilityDesc + '</span>' +
+      '</div>' +
+      '<div class="sbg-carousel-start-btn" id="sbg-carousel-start-btn">이 멤버로 시작</div>';
+    info.querySelector('#sbg-carousel-start-btn').addEventListener('click', function () { openCharConfirm(key); });
   }
 
   function openCharConfirm(key) {
@@ -818,10 +875,11 @@
   // 노트만 화면에 나타나 정상 속도로 이동), 가상 시계가 정확히 0에 도달하는
   // 순간(=실제 곡 시작 시점) 오디오 재생을 시작한다 — 노트 시각(note.t) 자체는
   // 전혀 안 바꾸므로 오디오 내용과의 싱크는 그대로 유지되고, 첫 노트도 항상
-  // 완전한 이동 애니메이션을 거쳐 등장한다. LEAD_IN=1.9초는 최대 이동시간
-  // (22-11차로 NOTE_TRAVEL이 1.3초로 늘어나 1.3*1.15≈1.5초)보다 여유 있게
-  // 길게 잡은 값(22-11차: 1.05→1.3초 상향에 맞춰 1.6→1.9초로 같이 상향).
-  var LEAD_IN = 1.9;
+  // 완전한 이동 애니메이션을 거쳐 등장한다. LEAD_IN=2.5초는 최대 이동시간
+  // (22-15차로 STAGE 1 전용 배율까지 더하면 1.3*1.15(새벽)*1.35(STAGE1)
+  // ≈2.02초)보다 여유 있게 길게 잡은 값(22-11차: 1.05→1.3초 상향에 맞춰
+  // 1.6→1.9초로, 22-15차: STAGE1 전용 배율 추가에 맞춰 1.9→2.5초로 재상향).
+  var LEAD_IN = 2.5;
   var goAt = null;          // performance.now() 기준, "GO!" 직후 리드인이 시작된 시각
   var audioLaunched = false; // 리드인이 끝나 실제 playAudio.play()를 호출했는지
 
@@ -1042,7 +1100,7 @@
     // 전부 더 관대해지도록 함(윈도우 크기만 바뀌고, 판정 기준 시각 자체(note.t)나
     // 점수/랭크 계산식은 그대로).
     var c = getCharacter(activeCharacterKey);
-    var winMult = c.type === 'windowBoost' ? c.value : 1;
+    var winMult = (c.type === 'windowBoost' ? c.value : 1) * stage1EaseMult();
     var wPerfect = WIN_PERFECT * winMult, wGreat = WIN_GREAT * winMult, wGood = WIN_GOOD * winMult;
     var best = null, bestDiff = Infinity;
     currentSong.notes.forEach(function (note) {
@@ -1086,11 +1144,11 @@
     // 22차 — 새벽 "디렉터스 아이": 노트의 실제 도착 시각(note.t, 판정 기준)은
     // 전혀 안 건드리고, 화면에서 노트가 이동하는 "체감 이동 시간"만 15% 늘려서
     // (=더 일찍 나타나고 더 천천히 다가오게) 반응할 시간을 더 준다.
-    var travel = NOTE_TRAVEL * (c.type === 'slowNotes' ? c.value : 1);
+    var travel = NOTE_TRAVEL * (c.type === 'slowNotes' ? c.value : 1) * stage1EaseMult();
     // 22차 — 나리 "스테디 보이스": 자동 미스 판정 기준도 넓어진 GOOD 윈도우에
     // 맞춰 같이 늦춰야, 넓어진 윈도우 안에서 키를 눌러도 그 전에 이미 자동
     // 미스 처리되는 모순이 생기지 않는다(handleKey의 wGood과 동일 계산).
-    var missAt = WIN_GOOD * (c.type === 'windowBoost' ? c.value : 1);
+    var missAt = WIN_GOOD * (c.type === 'windowBoost' ? c.value : 1) * stage1EaseMult();
     currentSong.notes.forEach(function (note) {
       if (note.judged) {
         if (note.el) removeNote(note);
